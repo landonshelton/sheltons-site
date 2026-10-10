@@ -1,0 +1,158 @@
+{
+ "at": "2026-10-09T19:19:46Z",
+ "products": {
+  "sDSKjtuSAoPcTvRyZvel": {
+   "name": "Leather Ceramic Coating Add On",
+   "shop": false,
+   "tiers": {
+    "flat": 50.0
+   }
+  },
+  "l5cWBLtRiXfI0r6gSHDT": {
+   "name": "Leather Ceramic Coating (18 Months)",
+   "shop": true,
+   "tiers": {
+    "flat": 200.0
+   }
+  },
+  "OnlxtBZ9unrNAJCCaGpg": {
+   "name": "Maintenance Exterior Wash (Only For ceramic coatings/PPF)",
+   "shop": true,
+   "tiers": {
+    "flat": 80.0
+   }
+  },
+  "bBm4hssJTOVp3PsH9DPN": {
+   "name": "Full Detail ( Lvl 1 Interior. Lvl 0.5 Exterior )",
+   "shop": true,
+   "tiers": {
+    "Coupe/Sedan": 300.0,
+    "Small/Midsize Suv": 330.0,
+    "Truck/Large Suv": 370.0
+   }
+  },
+  "FyRzTtFhWq1pkAMSJGd0": {
+   "name": "Wash Clay and Seal. (Lvl 1 Exterior)",
+   "shop": true,
+   "tiers": {
+    "Coupe/Sedan": 125.0,
+    "Small/Midsize Suv": 145.0,
+    "Truck/Large Suv": 165.0
+   }
+  },
+  "XbjJeTW6ZqAYUEB6Vxfu": {
+   "name": "Premium Interior Detail (Lvl 1 Interior)",
+   "shop": true,
+   "tiers": {
+    "Coupe/Sedan": 205.0,
+    "Small/Midsize Suv": 230.0,
+    "Truck/Large Suv": 270.0
+   }
+  },
+  "Fgbm7qT6HifazeO9UbNZ": {
+   "name": "8 Year  ceramic coating",
+   "shop": false,
+   "tiers": {
+    "flat": 1900.0
+   }
+  },
+  "rC5zGp6Z59JbKDeT0Ldu": {
+   "name": "3 Year ceramic coating",
+   "shop": false,
+   "tiers": {
+    "flat": 1500.0
+   }
+  },
+  "4pWyOVtdlLIvtCQSTEsu": {
+   "name": "4 Weeks Maintaince",
+   "shop": false,
+   "tiers": {
+    "flat": 250.0
+   }
+  },
+  "bfowKQkYFtvDbmE3Xmzf": {
+   "name": "2 Weeks Miantaince",
+   "shop": false,
+   "tiers": {
+    "flat": 150.0
+   }
+  },
+  "7C69SDUOWw7RWgTDUfXD": {
+   "name": "12 Month hands free maintenance program",
+   "shop": false,
+   "tiers": {
+    "flat": 6600.0
+   }
+  },
+  "o8ezF7GOpoBVH5nPZoKU": {
+   "name": "Basic exterior",
+   "shop": false,
+   "tiers": {
+    "flat": 80.0
+   }
+  },
+  "co1oBY7XYbaXvAkBWwiD": {
+   "name": "Pet hair removal",
+   "shop": false,
+   "tiers": {
+    "flat": 50.0
+   }
+  },
+  "v8JoJ1NSB0phf6kA9jDD": {
+   "name": "Step 2 paint correction",
+   "shop": false,
+   "tiers": {
+    "flat": 250.0
+   }
+  },
+  "kBKf4IJf681RHFs8hHnH": {
+   "name": "Tar Removal",
+   "shop": false,
+   "tiers": {
+    "flat": 49.99
+   }
+  },
+  "d9ZthTVG7PmBh4rAEg0Z": {
+   "name": "Engine bay cleaning",
+   "shop": false,
+   "tiers": {
+    "flat": 49.99
+   }
+  },
+  "a9nG9REBCCsGEq27T7kR": {
+   "name": "Clay Bar & Paint Decontamination",
+   "shop": false,
+   "tiers": {
+    "flat": 74.99
+   }
+  },
+  "PdejofHUY3p3LeiutuMC": {
+   "name": "Carpet & Seat Extraction",
+   "shop": false,
+   "tiers": {
+    "flat": 99.99
+   }
+  },
+  "Yd0gxehM952OYUHXlxpI": {
+   "name": "Headlight Restoration",
+   "shop": false,
+   "tiers": {
+    "flat": 99.99
+   }
+  },
+  "VUBrd6RT1MxvHf62tp58": {
+   "name": "Trim Restoration",
+   "shop": false,
+   "tiers": {
+    "flat": 99.99
+   }
+  },
+  "SNoUQxJeSk7Vv9A3ZPt1": {
+   "name": "Ozone Treatment (Odor Treatment)",
+   "shop": false,
+   "tiers": {
+    "flat": 99.99
+   }
+  }
+ }
+}
