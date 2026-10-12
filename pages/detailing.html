@@ -1,4 +1,4 @@
-<div id="spd-live" data-page="detailing" data-v="ca7f4669a7">
+<div id="spd-live" data-page="detailing" data-v="257a2a905a">
 <!--
   Shelton's Premium Detail · DETAILING page
   slug:    /detailing
@@ -206,6 +206,20 @@
   .spd .foot h4{margin:0 0 6px}
   .spd .foot a{padding:7px 0}
   .spd .booklink a{display:inline-block;padding:12px 4px}
+}
+/* motion: hero rises in on load, sections reveal on scroll (sitewire.js), buttons lift, crest tilts */
+@keyframes swUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+.spd .hero>*{animation:swUp .8s cubic-bezier(.2,.7,.2,1) both}
+.spd .hero>*:nth-child(2){animation-delay:.09s}.spd .hero>*:nth-child(3){animation-delay:.18s}.spd .hero>*:nth-child(4){animation-delay:.27s}.spd .hero>*:nth-child(5){animation-delay:.36s}.spd .hero>*:nth-child(n+6){animation-delay:.45s}
+.spd .sw-rv{opacity:0;transform:translateY(18px)}
+.spd .sw-rv.sw-in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--swd,0ms),transform .7s cubic-bezier(.2,.7,.2,1) var(--swd,0ms)}
+.spd .cta{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s ease,filter .25s ease}
+.spd .cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(59,143,196,.35)}
+.spd .cta:active{transform:translateY(0);box-shadow:none}
+.spd .pcard,.spd .srow{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease}
+.spd img[src*="/img/logo"]{transition:transform .5s cubic-bezier(.34,1.56,.64,1),filter .5s ease;transform-origin:50% 60%}
+.spd img[src*="/img/logo"]:hover,.spd a:hover>img[src*="/img/logo"]{transform:translateY(-4px) rotate(-8deg) scale(1.08);filter:drop-shadow(0 8px 14px rgba(59,143,196,.45))}
 }
 /* full bleed: break out of the GHL row so the page runs edge to edge */
 .spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}

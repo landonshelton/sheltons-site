@@ -33,12 +33,15 @@
     return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
   }
 
+  function fmt(k, v) { return k === 'rating' ? Number(v).toFixed(1) : Math.round(Number(v)).toLocaleString('en-US'); }
+
   function numbers() {
     return get('numbers.json').then(function (d) {
       document.querySelectorAll('[data-live]').forEach(function (el) {
         var k = el.getAttribute('data-live'), v = d[k];
         if (v == null) return;
-        el.textContent = k === 'rating' ? Number(v).toFixed(1) : Number(v).toLocaleString('en-US');
+        if (el.getAttribute('data-sw-counting')) el.setAttribute('data-sw-to', v);
+        else el.textContent = fmt(k, v);
       });
     }).catch(function () {});
   }
@@ -118,7 +121,54 @@
       }).catch(function () {});
   }
 
-  function all() { swap().then(function () { numbers(); prices(); reviews(); }); }
+  // Scroll reveals: anything starting below the fold rises in when it scrolls into view;
+  // grid and flex rows stagger their items; live stat numbers count up. Nothing already
+  // on screen is hidden, so the first paint never flickers. Styles live in each page.
+  function motion() {
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var fold = innerHeight;
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('sw-in');
+        io.unobserve(e.target);
+        e.target.querySelectorAll ? [e.target].concat([].slice.call(e.target.querySelectorAll('[data-live]'))).forEach(count) : 0;
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    function prep(el, d) {
+      if (el.classList.contains('sw-rv') || el.getBoundingClientRect().top < fold) return;
+      el.style.setProperty('--swd', d + 'ms');
+      el.classList.add('sw-rv');
+      io.observe(el);
+    }
+    document.querySelectorAll('.spd section:not(.hero), .spd footer').forEach(function (sec) {
+      [].slice.call(sec.children).forEach(function (c, i) {
+        var d = getComputedStyle(c).display, kids = c.children;
+        if ((d === 'grid' || d === 'flex') && kids.length > 1 && kids.length <= 12 && !c.querySelector('.adroll') && !c.classList.contains('adroll')) {
+          [].slice.call(kids).forEach(function (k, j) { prep(k, j * 80); });
+        } else prep(c, Math.min(i, 3) * 60);
+      });
+    });
+    document.querySelectorAll('.spd [data-live]').forEach(function (el) {
+      if (el.getBoundingClientRect().top < fold) count(el);
+    });
+  }
+
+  function count(el) {
+    if (!el.hasAttribute || !el.hasAttribute('data-live') || el.closest('.hero')) return;
+    var k = el.getAttribute('data-live'), to = parseFloat(el.textContent.replace(/,/g, ''));
+    if (!isFinite(to) || to <= 0) return;
+    el.setAttribute('data-sw-counting', '1'); el.setAttribute('data-sw-to', to);
+    var t0 = performance.now(), dur = 1300;
+    (function step(t) {
+      var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3), target = Number(el.getAttribute('data-sw-to'));
+      el.textContent = k === 'rating' ? (target * e).toFixed(1) : fmt(k, target * e);
+      if (p < 1) requestAnimationFrame(step);
+      else { el.textContent = fmt(k, target); el.removeAttribute('data-sw-counting'); }
+    })(t0);
+  }
+
+  function all() { swap().then(function () { motion(); numbers(); prices(); reviews(); }); }
   ga4();
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', all); else all();
   setInterval(numbers, 15 * 60 * 1000);
