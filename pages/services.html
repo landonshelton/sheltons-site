@@ -1,4 +1,4 @@
-<div id="spd-live" data-page="services" data-v="38fbf193e5">
+<div id="spd-live" data-page="services" data-v="3b40e9d36d">
 <!--
   Shelton's Premium Detail · SERVICES page
   slug:    /services
@@ -153,6 +153,8 @@
 .spd img[src*="/img/logo"]{transition:transform .5s cubic-bezier(.34,1.56,.64,1),filter .5s ease;transform-origin:50% 60%}
 .spd img[src*="/img/logo"]:hover,.spd a:hover>img[src*="/img/logo"]{transform:translateY(-4px) rotate(-8deg) scale(1.08);filter:drop-shadow(0 8px 14px rgba(59,143,196,.45))}
 }
+/* rating dot: Montserrat's period sits wide, pull the digits in around it */
+.spd .sw-dot{margin:0 -.06em}
 /* full bleed: break out of the GHL row so the page runs edge to edge */
 .spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
 </style>
@@ -196,8 +198,8 @@
   <div class="sechead"><h2>FAQ</h2></div>
   <div class="faq">
     <details class="fi"><summary>I don't know what my vehicle needs. Where do I start?</summary><p>Detailing, nine times out of ten. The vehicle rating guide on that page lets you pick the condition it's in and shows what that detail covers. If it's already clean and you want it kept that way, that's Maintenance.</p></details>
-    <details class="fi"><summary>What's the difference between a detail and maintenance?</summary><p>A detail is one visit that brings the vehicle back to our standard. Maintenance is our crew every two weeks keeping it there. Most maintenance clients start with a detail.</p></details>
-    <details class="fi"><summary>Do I need to be home?</summary><p>For the start, yes. We walk the vehicle with you and re-inspect it before anything is touched. After that, go about your day. We need a water spigot and an outlet.</p></details>
+    <details class="fi"><summary>What's the difference between a detail and maintenance?</summary><p>A detail is one visit that brings the vehicle back to our standard. Maintenance is our crew coming back every two weeks to keep it there. Most maintenance clients start with a detail.</p></details>
+    <details class="fi"><summary>Do I need to be home?</summary><p>Just for the start. We walk the vehicle with you and re-inspect it before we touch anything. After that you can go about your day. All we need is a water spigot and an outlet.</p></details>
     <details class="fi"><summary>Where do you go?</summary><p>Cedar Creek Lake and Henderson County, at your driveway. Further out across East Texas by arrangement.</p></details>
   </div>
 </section>
@@ -212,7 +214,7 @@
 
 <footer class="foot">
   <div class="fcols">
-    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest" loading="lazy"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5.0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
+    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest" loading="lazy"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5<span class="sw-dot">.</span>0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
     <div><h4>Services</h4><a href="/detailing">Full Detail</a><a href="/detailing">Interior Detail</a><a href="/detailing">Exterior Detail</a><a href="/maintenance">Maintenance</a></div>
     <div><h4>Company</h4><a href="https://maps.google.com/maps?cid=18272422692036339866" target="_blank" rel="noopener">Google Reviews</a><a href="https://www.instagram.com/sheltonspremiumdetail/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61579896224490" target="_blank" rel="noopener">Facebook</a><a href="/privacypolicy">Privacy Policy</a></div>
     <div class="freach"><h4>Reach us</h4><a href="tel:+19036036017">(903) 603-6017</a><a href="mailto:landonshelton@sheltonspremiumdetail.com">landonshelton@sheltonspremiumdetail.com</a><p class="fsm">Mobile across Henderson County and Cedar Creek Lake.</p></div>

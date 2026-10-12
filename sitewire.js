@@ -34,6 +34,11 @@
   }
 
   function fmt(k, v) { return k === 'rating' ? Number(v).toFixed(1) : Math.round(Number(v)).toLocaleString('en-US'); }
+  // the rating's decimal point sits in .sw-dot so each page can tighten it
+  function put(el, k, txt) {
+    if (k === 'rating') el.innerHTML = esc(txt).replace('.', '<span class="sw-dot">.</span>');
+    else el.textContent = txt;
+  }
 
   function numbers() {
     return get('numbers.json').then(function (d) {
@@ -41,7 +46,7 @@
         var k = el.getAttribute('data-live'), v = d[k];
         if (v == null) return;
         if (el.getAttribute('data-sw-counting')) el.setAttribute('data-sw-to', v);
-        else el.textContent = fmt(k, v);
+        else put(el, k, fmt(k, v));
       });
     }).catch(function () {});
   }
@@ -162,9 +167,9 @@
     var t0 = performance.now(), dur = 1300;
     (function step(t) {
       var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3), target = Number(el.getAttribute('data-sw-to'));
-      el.textContent = k === 'rating' ? (target * e).toFixed(1) : fmt(k, target * e);
+      put(el, k, k === 'rating' ? (target * e).toFixed(1) : fmt(k, target * e));
       if (p < 1) requestAnimationFrame(step);
-      else { el.textContent = fmt(k, target); el.removeAttribute('data-sw-counting'); }
+      else { put(el, k, fmt(k, target)); el.removeAttribute('data-sw-counting'); }
     })(t0);
   }
 

@@ -1,4 +1,4 @@
-<div id="spd-live" data-page="ceramic-coating" data-v="76e026b2c5">
+<div id="spd-live" data-page="ceramic-coating" data-v="75e00f0a00">
 <!--
   Shelton's Premium Detail · CERAMIC COATING page (PARKED)
   slug:    /ceramic-coating
@@ -120,7 +120,7 @@
 
 /* booking window (live Urable shop) */
 .spd .bookfull{background:#fff;padding:0}
-.spd .bookfull iframe{width:100%;height:900px;display:block;border:0}
+.spd .bookfull iframe{width:100%;height:min(900px,88vh);display:block;border:0}
 .spd .booklink{text-align:center;font-size:13px;padding:10px 16px 14px;color:var(--muted)}
 .spd .booklink a{color:var(--blue);font-weight:600}
 
@@ -177,7 +177,7 @@
   .spd .board .gstars small{font-size:11px;white-space:nowrap}
   .spd .board .gstars svg{width:14px;height:14px}
   .spd .board .gcard>img,.spd .board .sw-photo{width:100%;height:auto;aspect-ratio:4/3}
-  .spd .bookfull iframe{height:760px}
+  .spd .bookfull iframe{height:min(760px,82vh)}
   .spd .faqo{gap:30px}
   .spd .foq{padding:16px 40px;font-size:1.1rem}
   .spd .foq span{right:14px}
@@ -205,6 +205,15 @@
 .spd img[src*="/img/logo"]{transition:transform .5s cubic-bezier(.34,1.56,.64,1),filter .5s ease;transform-origin:50% 60%}
 .spd img[src*="/img/logo"]:hover,.spd a:hover>img[src*="/img/logo"]{transform:translateY(-4px) rotate(-8deg) scale(1.08);filter:drop-shadow(0 8px 14px rgba(59,143,196,.45))}
 }
+/* rating dot: Montserrat's period sits wide, pull the digits in around it */
+.spd .sw-dot{margin:0 -.06em}
+/* booking window: a shield keeps the page scrolling past it until they tap in; leaving re-arms it */
+.spd .bkwrap{position:relative}
+.spd .bkshield{position:absolute;inset:0;display:flex;align-items:flex-start;justify-content:center;padding:110px 16px 0;margin:0;background:rgba(11,18,32,.04);border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;width:100%}
+.spd .bkshield span{font:700 13px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;background:var(--navy);color:#fff;padding:16px 24px;border-radius:999px;box-shadow:0 10px 24px rgba(11,18,32,.25);transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.spd .bkshield:hover span{transform:translateY(-2px)}
+.spd .bkshield:focus-visible span{outline:2px solid var(--blue);outline-offset:3px}
+.spd .bkwrap.on .bkshield{display:none}
 /* full bleed: break out of the GHL row so the page runs edge to edge */
 .spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
 </style>
@@ -217,7 +226,7 @@
   <h1>Want it to stay clean longer?</h1>
   <p class="sub">Ceramic coating at your driveway, done the right way by trained professionals.</p>
   <div class="btns"><a class="cta big" href="#book">Get it quoted</a></div>
-  <div class="rating"><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="stars">★★★★★</span><b data-live="rating">5.0</b><span class="sep">|</span><span><span data-live="reviews">85</span> reviews</span></div>
+  <div class="rating"><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="stars">★★★★★</span><b data-live="rating">5<span class="sw-dot">.</span>0</b><span class="sep">|</span><span><span data-live="reviews">85</span> reviews</span></div>
 </section>
 
 <section class="sec">
@@ -312,7 +321,7 @@
 </section>
 
 <section class="bookfull" id="book">
-  <iframe src="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" allow="payment *; geolocation *" loading="lazy" title="Book with Shelton's Premium Detail"></iframe>
+  <div class="bkwrap"><iframe src="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" allow="payment *; geolocation *" loading="lazy" title="Book with Shelton's Premium Detail"></iframe><button class="bkshield" type="button" aria-label="Start booking"><span>Tap to start booking</span></button></div>
   <p class="booklink"><a href="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" target="_blank" rel="noopener">Window not loading? Open booking</a></p>
 </section>
 
@@ -331,12 +340,12 @@
   <h2 class="pbh">Ready to protect it?</h2>
   <p class="sub">Quoted with you in person, at your driveway.</p>
   <div class="btns"><a class="cta big" href="#book">Get it quoted</a></div>
-  <div class="rating"><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="stars">★★★★★</span><b data-live="rating">5.0</b><span class="sep">|</span><span><span data-live="reviews">85</span> reviews</span></div>
+  <div class="rating"><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="stars">★★★★★</span><b data-live="rating">5<span class="sw-dot">.</span>0</b><span class="sep">|</span><span><span data-live="reviews">85</span> reviews</span></div>
 </section>
 
 <footer class="foot">
   <div class="fcols">
-    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest" loading="lazy"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5.0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
+    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest" loading="lazy"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5<span class="sw-dot">.</span>0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
     <div><h4>Services</h4><a href="/detailing">Full Detail</a><a href="/detailing">Interior Detail</a><a href="/detailing">Exterior Detail</a><a href="/maintenance">Maintenance</a></div>
     <div><h4>Company</h4><a href="https://maps.google.com/maps?cid=18272422692036339866" target="_blank" rel="noopener">Google Reviews</a><a href="https://www.instagram.com/sheltonspremiumdetail/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61579896224490" target="_blank" rel="noopener">Facebook</a><a href="/privacypolicy">Privacy Policy</a></div>
     <div class="freach"><h4>Reach us</h4><a href="tel:+19036036017">(903) 603-6017</a><a href="mailto:landonshelton@sheltonspremiumdetail.com">landonshelton@<wbr>sheltonspremiumdetail.com</a><p class="fsm">Mobile across Henderson County and Cedar Creek Lake.</p></div>
@@ -360,5 +369,6 @@
 })();
 </script>
 <script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){var c=getComputedStyle(p);if(c.overflowX!=="visible"||c.overflowY!=="visible")p.style.overflow="visible"}})}f();addEventListener("resize",f)})();</script>
+<script>(function(){document.querySelectorAll(".spd .bkwrap").forEach(function(w){var b=w.querySelector(".bkshield");b.addEventListener("click",function(){w.classList.add("on")});w.addEventListener("mouseleave",function(){w.classList.remove("on")});if("IntersectionObserver"in window)new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)w.classList.remove("on")})}).observe(w)})})();</script>
 </div>
 <script src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/sitewire.js" data-ga4="G-ZVRP0SLZQV" defer></script>

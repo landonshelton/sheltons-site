@@ -1,4 +1,4 @@
-<div id="spd-live" data-page="home" data-v="b6e3b7757c">
+<div id="spd-live" data-page="home" data-v="839135ca6f">
 <!--
   Shelton's Premium Detail | HOME
   slug: /   (GHL page path: home / root)
@@ -164,6 +164,8 @@
 .spd img[src*="/img/logo"]{transition:transform .5s cubic-bezier(.34,1.56,.64,1),filter .5s ease;transform-origin:50% 60%}
 .spd img[src*="/img/logo"]:hover,.spd a:hover>img[src*="/img/logo"]{transform:translateY(-4px) rotate(-8deg) scale(1.08);filter:drop-shadow(0 8px 14px rgba(59,143,196,.45))}
 }
+/* rating dot: Montserrat's period sits wide, pull the digits in around it */
+.spd .sw-dot{margin:0 -.06em}
 /* full bleed: break out of the GHL row so the page runs edge to edge */
 .spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
 </style>
@@ -191,11 +193,11 @@
   <h1>Want it done right the first time?</h1>
   <p class="sub">The highest-rated detailer on Cedar Creek Lake, at your driveway. Hand us the keys and go about your day.</p>
   <div class="btns"><a class="cta big" href="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" target="_blank" rel="noopener">Book Now</a></div>
-  <div class="rating"><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="stars">★★★★★</span><b data-live="rating">5.0</b><span class="sep">|</span><span><span data-live="reviews">85</span> reviews</span></div>
+  <div class="rating"><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="stars">★★★★★</span><b data-live="rating">5<span class="sw-dot">.</span>0</b><span class="sep">|</span><span><span data-live="reviews">85</span> reviews</span></div>
 </section>
 
 <section class="proof">
-  <div><b data-live="rating">5.0</b><span>Google rating</span></div>
+  <div><b data-live="rating">5<span class="sw-dot">.</span>0</b><span>Google rating</span></div>
   <div><b data-live="reviews">85</b><span>Five-star reviews</span></div>
   <div><b data-live="vehicles">188</b><span>Vehicles detailed</span></div>
   <div><b>#1</b><span>Rated in Cedar Creek Lake</span></div>
@@ -213,11 +215,11 @@
   <div class="sechead"><h2>FAQ</h2></div>
   <div class="faq">
     <details class="fi"><summary>What is Shelton's Premium Detail?</summary><p>A mobile detailing company on Cedar Creek Lake. We come to your driveway, use your water spigot and an outlet, and hand your vehicle back looking like the day you bought it. The highest-rated detailer on the lake, by a long way.</p></details>
-    <details class="fi"><summary>How do I schedule a detail?</summary><p>Hit Book Now. Pick your vehicle size, pick the service, pick a day and time that works, and you're booked. We text to confirm, show up when we said, and walk the vehicle with you before we start. No deposit, no phone tag.</p></details>
-    <details class="fi"><summary>Who is this for?</summary><p>Owners who want it done right, not fast. New cars you want to keep new, lake cars that live in the sun, work trucks, busy lake moms who'd rather not clean up after the kids, Porsches, and the Corvette you only drive on Sundays.</p></details>
+    <details class="fi"><summary>How do I schedule a detail?</summary><p>Hit Book Now, choose your vehicle size and the service, then grab a day and time. We'll text you to confirm. On the day we show up when we said we would and walk the vehicle with you before we start. You don't pay a deposit, and you won't be playing phone tag with us.</p></details>
+    <details class="fi"><summary>Who is this for?</summary><p>Owners who'd rather have it done right than done fast. New cars you want to keep new, lake cars that live in the sun, work trucks, busy lake moms who'd rather not clean up after the kids, Porsches, and the Corvette you only drive on Sundays.</p></details>
     <details class="fi"><summary>How much does it cost?</summary><p>A Full Detail starts at <span data-price="bBm4hssJTOVp3PsH9DPN" data-tier="Coupe/Sedan">$300</span> for a coupe or sedan, <span data-price="bBm4hssJTOVp3PsH9DPN" data-tier="Small/Midsize Suv">$330</span> for a small or mid SUV, <span data-price="bBm4hssJTOVp3PsH9DPN" data-tier="Truck/Large Suv">$370</span> for a truck or large SUV. Exterior-only and interior-only tiers run less. Every price shows in Book Now before you commit, and there's nothing added on the day.</p></details>
-    <details class="fi"><summary>What's the difference between a detail and a car wash?</summary><p>A wash gets the loose dirt off and puts swirls in your paint doing it. A detail starts with a foam pre-wash and a two-bucket hand wash, then clay and iron to pull out what's bonded to the paint, then a sealant so it stays slick for months. Inside, every panel, vent, seam and seat gets cleaned and fed, not wiped. It's three to six hours on the vehicle for a reason.</p></details>
-    <details class="fi"><summary>What if I'm not happy with it?</summary><p>Call or text within 48 hours and we come back and make it right, no charge and no argument. If you're not happy, we aren't happy. Eighty-five five-star reviews and that promise has been used twice.</p></details>
+    <details class="fi"><summary>What's the difference between a detail and a car wash?</summary><p>A wash gets the loose dirt off and puts swirls in your paint doing it. A detail starts with a foam pre-wash and a two-bucket hand wash, then clay and iron to pull out what's bonded to the paint, then a sealant so it stays slick for months. Inside, we clean and condition every panel, vent, seam and seat instead of just wiping them down. That's why it takes three to six hours.</p></details>
+    <details class="fi"><summary>What if I'm not happy with it?</summary><p>Call or text us within 48 hours and we'll come back and fix it for free. We won't argue with you about it. We've got 85 five-star reviews, and only two people have ever needed that promise.</p></details>
   </div>
 </section>
 
@@ -237,7 +239,7 @@
 
 <footer class="foot">
   <div class="fcols">
-    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5.0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
+    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5<span class="sw-dot">.</span>0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
     <div><h4>Services</h4><a href="/detailing">Full Detail</a><a href="/detailing">Interior Detail</a><a href="/detailing">Exterior Detail</a><a href="/maintenance">Maintenance</a></div>
     <div><h4>Company</h4><a href="https://maps.google.com/maps?cid=18272422692036339866" target="_blank" rel="noopener">Google Reviews</a><a href="https://www.instagram.com/sheltonspremiumdetail/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61579896224490" target="_blank" rel="noopener">Facebook</a><a href="/privacypolicy">Privacy Policy</a></div>
     <div><h4>Reach us</h4><a href="tel:+19036036017">(903) 603-6017</a><a href="mailto:landonshelton@sheltonspremiumdetail.com">landonshelton@<wbr>sheltonspremiumdetail.com</a><p class="fsm">Mobile across Henderson County and Cedar Creek Lake.</p></div>
