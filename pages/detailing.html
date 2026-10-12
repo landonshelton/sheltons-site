@@ -1,4 +1,4 @@
-<div id="spd-live" data-page="detailing" data-v="9f83b431de">
+<div id="spd-live" data-page="detailing" data-v="e813d0547a">
 <!--
   Shelton's Premium Detail · DETAILING page
   slug:    /detailing
@@ -223,13 +223,18 @@
 }
 /* rating dot: Montserrat's period sits wide, pull the digits in around it */
 .spd .sw-dot{margin:0 -.06em}
-/* booking window: a shield keeps the page scrolling past it until they tap in; leaving re-arms it */
+/* booking window: a shield keeps the page scrolling past it; tapping it opens the shop full screen, Back returns */
 .spd .bkwrap{position:relative}
 .spd .bkshield{position:absolute;inset:0;display:flex;align-items:flex-start;justify-content:center;padding:110px 16px 0;margin:0;background:rgba(11,18,32,.04);border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;width:100%}
 .spd .bkshield span{font:700 13px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;background:var(--navy);color:#fff;padding:16px 24px;border-radius:999px;box-shadow:0 10px 24px rgba(11,18,32,.25);transition:transform .25s cubic-bezier(.2,.7,.2,1)}
 .spd .bkshield:hover span{transform:translateY(-2px)}
 .spd .bkshield:focus-visible span{outline:2px solid var(--blue);outline-offset:3px}
-.spd .bkwrap.on .bkshield{display:none}
+.spd .bkback{display:none}
+.spd .bkwrap.full{position:fixed;inset:0;z-index:2147483000;background:#fff;display:flex;flex-direction:column;animation:swUp .35s cubic-bezier(.2,.7,.2,1) both}
+.spd .bkwrap.full .bkshield{display:none}
+.spd .bkwrap.full iframe{flex:1;height:auto!important;min-height:0}
+.spd .bkwrap.full .bkback{order:-1;display:flex;align-items:center;gap:10px;width:100%;margin:0;border:0;cursor:pointer;background:var(--navy);color:#fff;padding:calc(14px + env(safe-area-inset-top,0px)) 18px 14px;font:700 13px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;text-align:left}
+.spd .bkback:focus-visible{outline:2px solid var(--blue-l,#7fbce4);outline-offset:-4px}
 /* full bleed: break out of the GHL row so the page runs edge to edge */
 .spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
 </style>
@@ -366,7 +371,7 @@
 </section>
 
 <section class="bookfull" id="book">
-  <div class="bkwrap"><iframe src="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC/uZbcLmiAzQcbazcdfH1j" allow="payment *; geolocation *" loading="lazy" title="Book with Shelton's Premium Detail"></iframe><button class="bkshield" type="button" aria-label="Start booking"><span>Tap to start booking</span></button></div>
+  <div class="bkwrap"><iframe src="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC/uZbcLmiAzQcbazcdfH1j" allow="payment *; geolocation *" loading="lazy" title="Book with Shelton's Premium Detail"></iframe><button class="bkshield" type="button" aria-label="Start booking"><span>Tap to start booking</span></button><button class="bkback" type="button">&larr;&nbsp; Back to site</button></div>
   <p class="booklink"><a href="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC/uZbcLmiAzQcbazcdfH1j" target="_blank" rel="noopener">Window not loading? Open booking</a></p>
 </section>
 
@@ -439,6 +444,6 @@
 })();
 </script>
 <script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){var c=getComputedStyle(p);if(c.overflowX!=="visible"||c.overflowY!=="visible")p.style.overflow="visible"}})}f();addEventListener("resize",f)})();</script>
-<script>(function(){document.querySelectorAll(".spd .bkwrap").forEach(function(w){var b=w.querySelector(".bkshield");b.addEventListener("click",function(){w.classList.add("on")});w.addEventListener("mouseleave",function(){w.classList.remove("on")});if("IntersectionObserver"in window)new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)w.classList.remove("on")})}).observe(w)})})();</script>
+<script>(function(){document.querySelectorAll(".spd .bkwrap").forEach(function(w){var s=w.querySelector(".bkshield"),k=w.querySelector(".bkback"),saved=[];function open(){saved=[];for(var p=w.parentElement;p&&p!==document.documentElement;p=p.parentElement){var c=getComputedStyle(p);if(c.transform!=="none"||c.filter!=="none"||c.perspective!=="none"||(c.contain&&c.contain!=="none"&&c.contain!=="normal")||(c.willChange||"").indexOf("transform")>-1){saved.push([p,p.style.cssText]);p.style.transform="none";p.style.filter="none";p.style.perspective="none";p.style.contain="none";p.style.willChange="auto"}}w.classList.add("full");document.documentElement.style.overflow="hidden";document.body.style.overflow="hidden";try{history.pushState({spdBook:1},"")}catch(e){}k.focus()}function shut(){if(!w.classList.contains("full"))return;w.classList.remove("full");document.documentElement.style.overflow="";document.body.style.overflow="";saved.forEach(function(x){x[0].style.cssText=x[1]});saved=[];s.focus({preventScroll:true})}s.addEventListener("click",open);k.addEventListener("click",function(){if(history.state&&history.state.spdBook)history.back();else shut()});addEventListener("popstate",shut);document.addEventListener("keydown",function(e){if(e.key==="Escape"&&w.classList.contains("full")){if(history.state&&history.state.spdBook)history.back();else shut()}})})})();</script>
 </div>
 <script src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/sitewire.js" data-ga4="G-ZVRP0SLZQV" defer></script>
