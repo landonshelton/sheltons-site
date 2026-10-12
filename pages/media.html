@@ -1,4 +1,4 @@
-<div id="spd-live" data-page="media" data-v="fa77b3469d">
+<div id="spd-live" data-page="media" data-v="4287d021e9">
 <!--
   Shelton's Premium Detail · MEDIA page
   DRAFT, not reviewed by Landon
@@ -112,6 +112,8 @@
   .spd .fcols>div:not(.fbrand) h4{margin-bottom:6px}
   .spd .foot a{padding:10px 0}
 }
+/* sticky nav: the bar stays pinned while the page scrolls */
+.spd .bar{position:sticky!important;top:0;z-index:60}
 /* full bleed: break out of the GHL row so the page runs edge to edge */
 .spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
 </style>
@@ -170,6 +172,6 @@
   });
 })();
 </script>
-<script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){if(getComputedStyle(p).overflowX!=="visible")p.style.overflowX="visible"}})}f();addEventListener("resize",f)})();</script>
+<script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){var c=getComputedStyle(p);if(c.overflowX!=="visible"||c.overflowY!=="visible")p.style.overflow="visible"}})}f();addEventListener("resize",f)})();</script>
 </div>
 <script src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/sitewire.js" data-ga4="G-ZVRP0SLZQV" defer></script>

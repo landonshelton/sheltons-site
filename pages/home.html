@@ -1,4 +1,4 @@
-<div id="spd-live" data-page="home" data-v="88559c6833">
+<div id="spd-live" data-page="home" data-v="e2c0a46c32">
 <!--
   Shelton's Premium Detail | HOME
   slug: /   (GHL page path: home / root)
@@ -48,9 +48,9 @@
 
 /* hero */
 .spd .hero{color:#fff;text-align:center;display:grid;gap:18px;justify-items:center;
-  background:linear-gradient(180deg,rgba(11,18,32,.78) 0%,rgba(11,18,32,.62) 55%,rgba(11,18,32,.92) 100%),url(https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/hero-bg.jpg) center 66%/cover no-repeat var(--navy);padding:96px 24px 72px}
-.spd .eyebrow{margin:0;font:700 11px/1 var(--h);letter-spacing:.24em;text-transform:uppercase;color:var(--blue-l)}
-.spd .eyebrow.dark{color:var(--blue)}
+  background:linear-gradient(180deg,rgba(11,18,32,.78) 0%,rgba(11,18,32,.62) 55%,rgba(11,18,32,.92) 100%),url(https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/hero-bg-2.jpg) center 66%/cover no-repeat var(--navy);padding:96px 24px 72px}
+.spd .eyebrow{background:none;padding:0;margin:0;font:700 11px/1 var(--h);letter-spacing:.24em;text-transform:uppercase;color:var(--blue-l)}
+.spd .eyebrow.ebd{color:var(--blue)}
 .spd .eyebrow.big{font-size:22px;letter-spacing:.18em;margin:10px 0 12px}
 .spd .hero h1{margin:0;color:#fff;font:700 clamp(27px,3.9vw,46px)/1.12 var(--h);letter-spacing:-.005em;text-wrap:balance;max-width:20ch;text-transform:uppercase}
 .spd .hero .sub{margin:0;font:500 19px/1.5 var(--b);color:#fff;max-width:44ch;text-shadow:0 1px 14px rgba(0,0,0,.45)}
@@ -148,6 +148,8 @@
   .spd .fbrand{grid-column:1 / -1}
   .spd .fcols>div:last-child{grid-column:1 / -1}
 }
+/* sticky nav: the bar stays pinned while the page scrolls */
+.spd .bar{position:sticky!important;top:0;z-index:60}
 /* full bleed: break out of the GHL row so the page runs edge to edge */
 .spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
 </style>
@@ -186,7 +188,7 @@
 </section>
 
 <section class="sec">
-  <div class="sechead"><p class="eyebrow dark big">Services</p><p class="lead">Pick the one that fits. Each page walks the process and what it does for the vehicle.</p></div>
+  <div class="sechead"><p class="eyebrow ebd big">Services</p><p class="lead">Pick the one that fits. Each page walks the process and what it does for the vehicle.</p></div>
   <div class="pick">
     <a class="pcard" href="/detailing"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/card-cayenne2.jpg" alt="" loading="lazy"><b>Detailing</b><small>Inside and out, professional-standard detailing made to clean the vehicle and bring it back to our standard.</small><span class="cta">Bring it back</span></a>
     <a class="pcard" href="/maintenance"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/card-lc-front.jpg" alt="" loading="lazy"><b>Maintenance</b><small>Every two weeks our professional crew comes to you and brings your vehicle back to brand new.</small><span class="cta">Never worry again</span></a>
@@ -207,9 +209,9 @@
 
 <section class="sec">
   <div class="owner">
-    <img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/owner-landon.jpg" alt="Landon Shelton, owner" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/owner-landon-2.jpg" alt="Landon Shelton, owner" loading="lazy">
     <div>
-      <p class="eyebrow dark">The owner</p>
+      <p class="eyebrow ebd">The owner</p>
       <h2>Founded at 17. Highest rated in year one.</h2>
       <p>Shelton's started because detailing around the lake had gotten lazy. Sixty-minute "details" with a brush and a spray wax. Owners who cared about their vehicles deserved the standard they'd hold themselves to, so that's what we built: at your driveway, done the right way by trained professionals, whether you're daily driving a Porsche or it's your ZR1 Corvette track car.</p>
       <p>If you're not happy, we aren't happy.</p>
@@ -247,6 +249,6 @@
   });
 })();
 </script>
-<script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){if(getComputedStyle(p).overflowX!=="visible")p.style.overflowX="visible"}})}f();addEventListener("resize",f)})();</script>
+<script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){var c=getComputedStyle(p);if(c.overflowX!=="visible"||c.overflowY!=="visible")p.style.overflow="visible"}})}f();addEventListener("resize",f)})();</script>
 </div>
 <script src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/sitewire.js" data-ga4="G-ZVRP0SLZQV" defer></script>
