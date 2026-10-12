@@ -1,0 +1,300 @@
+<div id="spd-live" data-page="privacypolicy" data-v="0152a7a121">
+<!--
+  Shelton's Premium Detail · PRIVACY POLICY page
+  slug:    /privacypolicy   (every footer links here)
+  built:   2026-10-12, replaces the August 4th, 2026 policy; same facts, plus the
+           new site's booking window, Google Analytics and Google reviews
+  paste:   GHL -> Sites -> this page -> ONE full-width section -> ONE Custom Code
+           element -> paste this whole file -> save. Updates after that go live
+           on their own (sitewire.js).
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+.spd{--navy:#0b1220;--footer:#080d18;--blue:#3b8fc4;--blue-l:#7fbce4;--blue-bg:#eef6fc;--bg2:#f7f8fa;--soft:#4a5568;--muted:#8896a4;--line:#e8ecf0;--gold:#f59e0b;--h:'Montserrat',system-ui,sans-serif;--b:'Inter',system-ui,sans-serif;
+  font-family:var(--b);font-size:16px;color:var(--navy);background:#fff;position:relative;width:100%;min-width:0;line-height:1.5;text-align:left;overflow-x:clip;-webkit-font-smoothing:antialiased}
+.spd *,.spd *::before,.spd *::after{box-sizing:border-box}
+.spd img{max-width:100%;border:0}
+.spd p,.spd h2,.spd h4{margin:0}
+.spd a{text-decoration:none}
+
+/* announcement (off by default) */
+.spd .ann{background:#fff;color:var(--navy);font:600 12px/1.3 var(--h);letter-spacing:.06em;text-align:center;padding:10px 16px;border-bottom:1px solid var(--line)}
+.spd .ann strong{color:var(--blue);font-weight:800}
+.spd .ann .arr{color:var(--blue);margin-left:6px}
+
+/* nav bar */
+.spd .bar{background:var(--navy);color:#fff;display:flex;align-items:center;gap:22px;padding:0 28px;height:72px;border-bottom:1px solid rgba(255,255,255,.06);position:relative;z-index:40}
+.spd .brand{display:flex;align-items:center;gap:9px;color:#fff;font:700 13px/1 var(--h);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.spd .brand img{height:36px;width:auto;display:block}
+.spd .brand .met{color:var(--blue);font-weight:700}
+.spd .nav{display:flex;gap:26px;margin-left:auto;align-items:center}
+.spd .nav>a,.spd .ddb{color:rgba(255,255,255,.82);font:600 11px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;padding:6px 0;margin:0;border:0;border-bottom:1.5px solid transparent;border-radius:0;background:none;cursor:pointer;box-shadow:none}
+.spd .nav>a:hover,.spd .dd:hover .ddb,.spd .dd.open .ddb{color:#fff;border-bottom-color:var(--blue)}
+.spd .ddb i{font-style:normal;font-size:9px;margin-left:4px;opacity:.7}
+.spd .dd{position:relative}
+.spd .dd::after{content:'';position:absolute;left:0;right:0;top:100%;height:16px}
+.spd .menu{display:none;position:absolute;top:calc(100% + 14px);left:-14px;min-width:230px;background:#fff;border-radius:10px;box-shadow:0 20px 50px rgba(0,0,0,.35);padding:8px;z-index:50}
+.spd .dd:hover .menu,.spd .dd.open .menu{display:grid}
+.spd .menu a{color:var(--navy);font:600 12px/1.2 var(--h);letter-spacing:.04em;padding:11px 12px;border-radius:7px;display:flex}
+.spd .menu a:hover{background:var(--blue-bg)}
+.spd .cta{background:var(--blue);color:#fff;border-radius:99px;font:700 11px/1 var(--h);letter-spacing:.18em;text-transform:uppercase;padding:13px 22px;white-space:nowrap;display:inline-block;text-align:center}
+.spd .cta:hover{color:#fff;filter:brightness(1.07)}
+.spd .burger{display:none;background:none;border:0;padding:6px;margin:0;cursor:pointer;box-shadow:none}
+.spd .burger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0}
+.spd .sheet{display:none}
+
+/* sections */
+.spd .sec{padding:72px 40px;background:#fff}
+.spd .sec.alt{background:var(--bg2)}
+.spd .sechead{max-width:760px;margin:0 auto 36px;text-align:center;display:grid;gap:12px;justify-items:center}
+.spd .sechead h2{font:800 clamp(1.6rem,3vw,2.5rem)/1.12 var(--h);letter-spacing:-.02em;text-wrap:balance;color:var(--navy)}
+.spd .eyebrow{font:700 22px/1 var(--h);letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin:10px 0 12px}
+.spd .lead{font:400 17px/1.55 var(--b);color:var(--soft);max-width:60ch}
+
+/* the two pills */
+.spd .pick{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:760px;margin:0 auto}
+.spd .pcard{display:grid;gap:10px;justify-items:center;align-content:start;text-align:center;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:10px;padding:0 0 24px;overflow:hidden;min-width:0;transition:box-shadow .15s,transform .15s}
+.spd .pcard:hover{box-shadow:0 14px 34px rgba(11,18,32,.12);transform:translateY(-2px);color:var(--navy)}
+.spd .pcard img{width:100%;height:240px;object-fit:cover;display:block;border-bottom:3px solid var(--blue)}
+.spd .pcard b{font:800 18px var(--h);letter-spacing:.02em;text-transform:uppercase;margin-top:8px}
+.spd .pcard small{font-size:15px;line-height:1.5;color:var(--soft);padding:0 22px}
+.spd .pcard .cta{margin-top:6px}
+
+/* proof: hand-picked Google reviews */
+.spd .gcards{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.spd .gcard{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px;box-shadow:0 10px 30px rgba(11,18,32,.12);font-family:var(--b);min-width:0}
+.spd .t0{transform:rotate(-2deg)}
+.spd .t1{transform:rotate(1.5deg) translateY(-10px)}
+.spd .t2{transform:rotate(2.5deg)}
+.spd .ghead{display:flex;gap:10px;align-items:center}
+.spd .gav{width:36px;height:36px;min-width:36px;border-radius:50%;object-fit:cover;flex:none;display:block}
+.spd .ghead b{display:block;font:600 14px/1.4 var(--b);color:var(--navy)}
+.spd .ghead small{color:var(--muted);font-size:12px}
+.spd .gstars{display:flex;gap:8px;align-items:center;margin:8px 0}
+.spd .gstars span{color:var(--gold);font-size:13px;letter-spacing:1px}
+.spd .gstars small{color:var(--muted);font-size:12px}
+.spd .gstars svg{width:18px;height:18px;flex:none;margin-left:auto}
+.spd .gcard p{margin:0 0 10px;font-size:13.5px;line-height:1.5;color:var(--navy)}
+.spd .gcard mark{background:#fff3a3;color:inherit;padding:0 2px}
+.spd .gcard>img{width:120px;height:90px;object-fit:cover;border-radius:4px;display:block}
+.spd .disc{max-width:62ch;margin:34px auto 0;text-align:center;font-size:13px;color:var(--muted)}
+
+/* FAQ */
+.spd .faq{max-width:900px;margin:0 auto;display:grid}
+.spd .fi{border:0;border-bottom:1px dashed #1b1a17;border-radius:0;padding:0;margin:0;background:transparent}
+.spd .fi summary{cursor:pointer;font:700 17px/1.3 var(--h);padding:18px 4px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--navy)}
+.spd .fi summary::-webkit-details-marker{display:none}
+.spd .fi summary::after{content:'';flex:none;width:9px;height:9px;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);transform:rotate(45deg);margin:0 8px 4px 0;transition:transform .15s}
+.spd .fi[open] summary::after{transform:rotate(-135deg);margin-bottom:-4px}
+.spd .fi p{margin:0 0 18px;padding:0 4px;font-size:15px;color:var(--soft)}
+
+/* footer */
+.spd .foot{background:var(--footer);color:rgba(255,255,255,.7);padding:56px 40px 28px}
+.spd .fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:30px;max-width:1180px;margin:0 auto 30px}
+.spd .fcols>div{display:grid;gap:8px;align-content:start;min-width:0}
+.spd .fbrand img{height:48px;width:auto;display:block}
+.spd .fbrand p{font-size:13.5px;max-width:34ch;color:rgba(255,255,255,.7)}
+.spd .fbrand .frate{color:#fff}
+.spd .foot h4{margin:0 0 4px;font:700 10.5px var(--h);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.spd .foot a{color:rgba(255,255,255,.7);font-size:13.5px;overflow-wrap:anywhere}
+.spd .foot a:hover{color:#fff}
+.spd .fsm{font-size:12.5px}
+.spd .copy{text-align:center;font-size:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:18px}
+
+@media (max-width:900px){
+  .spd .bar{padding:0 16px;height:60px;gap:12px}
+  .spd .brand span{display:none}
+  .spd .brand img{height:32px}
+  .spd .nav{display:none}
+  .spd .burger{display:block}
+  .spd .bar .cta{padding:11px 16px;font-size:10.5px;margin-left:auto}
+  .spd .sheet{position:absolute;top:60px;left:0;right:0;background:var(--navy);display:none;grid-template-columns:1fr;padding:10px 16px 18px;gap:2px;z-index:60;border-bottom:1px solid rgba(255,255,255,.08)}
+  .spd.menu-open .sheet{display:grid}
+  .spd .sheet .srow{color:#fff;font:600 12px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.08);display:block}
+  .spd .sheet summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between}
+  .spd .sheet summary::-webkit-details-marker{display:none}
+  .spd .sheet summary i{font-style:normal;opacity:.6;font-size:10px}
+  .spd .sheet details a{display:flex;color:rgba(255,255,255,.85);font:500 12px/1 var(--b);letter-spacing:.02em;text-transform:none;padding:11px 4px 11px 14px}
+  .spd .sec{padding:48px 18px}
+  .spd .pick{grid-template-columns:1fr;max-width:520px}
+  .spd .gcards{grid-template-columns:1fr;max-width:560px}
+  .spd .t0,.spd .t1,.spd .t2{transform:none}
+  .spd .fcols{grid-template-columns:1fr 1fr}
+  .spd .foot{padding:48px 18px 24px}
+}
+@media (max-width:600px){
+  .spd .eyebrow{font-size:20px;letter-spacing:.16em}
+  .spd .lead{font-size:16px}
+  .spd .pcard img{height:210px}
+  .spd .fi summary{font-size:16px}
+  .spd .fcols{gap:26px 20px}
+  .spd .fbrand,.spd .freach{grid-column:1 / -1}
+  .spd .fcols>div{gap:2px}
+  .spd .foot a{padding:6px 0}
+}
+/* sticky nav: the bar stays pinned while the page scrolls */
+.spd .bar{position:sticky!important;top:0;z-index:60}
+/* motion: hero rises in on load, sections reveal on scroll (sitewire.js), buttons lift, crest tilts */
+@keyframes swUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+.spd .hero>*{animation:swUp .8s cubic-bezier(.2,.7,.2,1) both}
+.spd .hero>*:nth-child(2){animation-delay:.09s}.spd .hero>*:nth-child(3){animation-delay:.18s}.spd .hero>*:nth-child(4){animation-delay:.27s}.spd .hero>*:nth-child(5){animation-delay:.36s}.spd .hero>*:nth-child(n+6){animation-delay:.45s}
+.spd .sw-rv{opacity:0;transform:translateY(18px)}
+.spd .sw-rv.sw-in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--swd,0ms),transform .7s cubic-bezier(.2,.7,.2,1) var(--swd,0ms)}
+.spd .cta{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s ease,filter .25s ease}
+.spd .cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(59,143,196,.35)}
+.spd .cta:active{transform:translateY(0);box-shadow:none}
+.spd .pcard,.spd .srow{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease}
+.spd img[src*="/img/logo"]{transition:transform .5s cubic-bezier(.34,1.56,.64,1),filter .5s ease;transform-origin:50% 60%}
+.spd img[src*="/img/logo"]:hover,.spd a:hover>img[src*="/img/logo"]{transform:translateY(-4px) rotate(-8deg) scale(1.08);filter:drop-shadow(0 8px 14px rgba(59,143,196,.45))}
+}
+/* rating dot: Montserrat's period sits wide, pull the digits in around it */
+.spd .sw-dot{margin:0 -.06em}
+/* privacy policy body: one readable column */
+.spd .pp{max-width:760px;margin:0 auto;display:grid;gap:34px;text-align:left}
+.spd .pp h3{margin:0 0 10px;font:800 20px/1.25 var(--h);color:var(--navy);display:flex;gap:12px;align-items:baseline}
+.spd .pp h3 small{font:700 12px/1 var(--h);letter-spacing:.14em;color:var(--blue);min-width:22px}
+.spd .pp p,.spd .pp li{margin:0;font:400 16px/1.65 var(--b);color:var(--soft)}
+.spd .pp p+p,.spd .pp p+ul,.spd .pp ul+p{margin-top:10px}
+.spd .pp ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.spd .pp b{color:var(--navy);font-weight:600}
+.spd .pp a{color:var(--blue);text-decoration:underline;text-underline-offset:2px;word-break:break-word}
+.spd .pp .ppc{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin-top:6px}
+.spd .pp .ppc dt{font:700 12px/1.9 var(--h);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.spd .pp .ppc dd{margin:0;font:500 16px/1.65 var(--b);color:var(--navy);min-width:0}
+/* full bleed: break out of the GHL row so the page runs edge to edge */
+.spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
+</style>
+
+<div class="spd spd-privacypolicy">
+<!-- ANNOUNCEMENT <div class="ann">NEW&nbsp; <strong>Fall openings:</strong> booking Full Details through October 18th <span class="arr">→</span></div> ANNOUNCEMENT -->
+
+<header class="bar">
+  <a class="brand" href="/"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest"><span><b class="met">Shelton's</b> Premium Detail</span></a>
+  <nav class="nav">
+    <div class="dd"><button class="ddb" type="button" aria-haspopup="true">Services <i>▾</i></button><div class="menu"><a href="/services">Services</a><a href="/maintenance">Maintenance</a><a href="/detailing">Detailing</a></div></div>
+    <a href="/media">Media</a><a href="/maintenance">Maintenance</a>
+  </nav>
+  <a class="cta" href="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" target="_blank" rel="noopener">Book Now</a>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="sheet">
+    <details class="srow"><summary>Services <i>▾</i></summary><a href="/services">Services</a><a href="/maintenance">Maintenance</a><a href="/detailing">Detailing</a></details>
+    <a class="srow" href="/media">Media</a><a class="srow" href="/maintenance">Maintenance</a>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="sechead"><p class="eyebrow">Privacy Policy</p><h2>How we handle your information</h2><p class="lead">Effective August 4th, 2026. Last updated October 12th, 2026.</p></div>
+  <div class="pp">
+
+    <div><h3><small>01</small>Who we are</h3>
+      <p>Shelton's Premium Detail is a mobile detailing company on Cedar Creek Lake and a Texas limited liability company. We also advertise as Shelton's Premium Mobile Detailing. When this policy says "we," "us" or "our," that's who it means.</p>
+      <p>This policy covers what we collect when you visit this site, book with us, or get in touch, what we do with it, and what you can ask us to change.</p></div>
+
+    <div><h3><small>02</small>What we collect</h3>
+      <ul>
+        <li><b>Contact details:</b> your name, phone number and email address.</li>
+        <li><b>Service details:</b> your vehicle, the service you want, the address we're coming to, and any notes you give us.</li>
+        <li><b>Booking and payment:</b> when you book through the booking window on this site, your details go into Urable, our booking software. Card payments are handled by Urable's payment processor. We never see or store your full card number.</li>
+        <li><b>Your vehicle's history and your preferences:</b> for maintenance clients, notes on past visits and how you like things done, so we don't have to ask twice.</li>
+        <li><b>Messages:</b> texts, calls and emails between you and us.</li>
+        <li><b>How you use this site:</b> see section 05.</li>
+      </ul>
+      <p>We only collect what you give us or what the site records while you browse it. We don't sell any of it.</p></div>
+
+    <div><h3><small>03</small>How we use it</h3>
+      <ul>
+        <li>To give you a quote and answer your questions.</li>
+        <li>To schedule your appointment, confirm it, and text you when we start and when we're done.</li>
+        <li>To do the work the way you like it.</li>
+        <li>To follow up after a service and tell you about maintenance plans or offers.</li>
+        <li>To see what's working on our site and in our ads, and fix what isn't.</li>
+      </ul></div>
+
+    <div><h3><small>04</small>Texts and calls</h3>
+      <p>When you give us your phone number, you agree that we can call and text you about your quote, your appointment and related offers. Message and data rates may apply, and how often we text depends on your service.</p>
+      <p>Reply <b>STOP</b> to any text to opt out, or tell us you'd rather not get calls. Agreeing to marketing texts is never a condition of buying anything from us. We don't share your phone number or your consent to receive texts with anyone else for their marketing.</p></div>
+
+    <div><h3><small>05</small>Website analytics and cookies</h3>
+      <p>This site uses Google Analytics to count visits. It records the pages you view and for how long, your device and browser, your rough location, how you found us, and whether you tapped Book Now. It uses cookies to do that. We look at it to see which pages help people book, and Google handles that data under its own privacy policy.</p>
+      <p>You can block or clear cookies in your browser settings, or install Google's opt-out add-on at <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</p>
+      <p>The site also loads its fonts from Google Fonts and its photos and live numbers from GitHub and jsDelivr. Like any website, those services see your IP address when your browser asks them for a file.</p></div>
+
+    <div><h3><small>06</small>Reviews on this site</h3>
+      <p>We show reviews that customers have posted publicly on Google, with the name and photo Google displays next to them. If one of them is yours and you'd like it off our site, tell us and we'll take it down.</p></div>
+
+    <div><h3><small>07</small>Who we share it with</h3>
+      <p>We don't sell or rent your personal information. We only share it with:</p>
+      <ul>
+        <li><b>Companies that help us run the business,</b> like Urable for booking, our scheduling and messaging tools, payment processors, and Google Analytics. They handle your information for us.</li>
+        <li><b>Legal authorities,</b> when the law requires it or to protect our rights, safety or property.</li>
+      </ul></div>
+
+    <div><h3><small>08</small>Ads on Facebook and Instagram</h3>
+      <p>We advertise on Facebook and Instagram, which Meta owns. If you reach us through a lead form on one of those apps, Meta collects your details and shares them with us under <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta's own privacy policy</a>.</p>
+      <p>This site and our business aren't part of, endorsed by, or run by Facebook, Instagram or Meta. Once your details reach us, this policy covers them.</p></div>
+
+    <div><h3><small>09</small>How long we keep it</h3>
+      <p>We keep your information as long as we need it to serve you, run the business, and meet legal and tax rules. After that we delete it or strip out anything that identifies you.</p></div>
+
+    <div><h3><small>10</small>Your choices</h3>
+      <ul>
+        <li><b>Texts:</b> reply STOP.</li>
+        <li><b>Email:</b> use the unsubscribe link, or ask us to take you off the list.</li>
+        <li><b>Seeing, fixing or deleting your information:</b> contact us and we'll take care of it.</li>
+      </ul></div>
+
+    <div><h3><small>11</small>Security</h3>
+      <p>We take reasonable steps to protect your information. No way of sending or storing data is completely secure, so we can't promise it never will be.</p></div>
+
+    <div><h3><small>12</small>Children</h3>
+      <p>Our services are for adults. We don't knowingly collect information from anyone under 18. If you think a child has given us their information, contact us and we'll delete it.</p></div>
+
+    <div><h3><small>13</small>Changes to this policy</h3>
+      <p>When we change this policy we'll update the date at the top of this page. If you keep using our services after that, the updated policy applies.</p></div>
+
+    <div><h3><small>14</small>Contact us</h3>
+      <p>Questions about this policy or your information:</p>
+      <dl class="ppc">
+        <dt>Business</dt><dd>Shelton's Premium Detail LLC</dd>
+        <dt>Phone</dt><dd><a href="tel:+19036036017">(903) 603-6017</a></dd>
+        <dt>Email</dt><dd><a href="mailto:landonshelton@sheltonspremiumdetail.com">landonshelton@sheltonspremiumdetail.com</a></dd>
+        <dt>Mail</dt><dd>900 Arnold Hills Ln, Kemp, TX 75143</dd>
+      </dl></div>
+
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="fcols">
+    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest" loading="lazy"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5<span class="sw-dot">.</span>0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
+    <div><h4>Services</h4><a href="/detailing">Full Detail</a><a href="/detailing">Interior Detail</a><a href="/detailing">Exterior Detail</a><a href="/maintenance">Maintenance</a></div>
+    <div><h4>Company</h4><a href="https://maps.google.com/maps?cid=18272422692036339866" target="_blank" rel="noopener">Google Reviews</a><a href="https://www.instagram.com/sheltonspremiumdetail/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61579896224490" target="_blank" rel="noopener">Facebook</a><a href="/privacypolicy">Privacy Policy</a></div>
+    <div class="freach"><h4>Reach us</h4><a href="tel:+19036036017">(903) 603-6017</a><a href="mailto:landonshelton@sheltonspremiumdetail.com">landonshelton@sheltonspremiumdetail.com</a><p class="fsm">Mobile across Henderson County and Cedar Creek Lake.</p></div>
+  </div>
+  <p class="copy">© 2026 Shelton's Premium Detail · Cedar Creek Lake, TX</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.currentScript&&document.currentScript.previousElementSibling;
+  if(!root||!root.classList||!root.classList.contains('spd'))root=document.querySelector('.spd.spd-privacypolicy');
+  if(!root)return;
+  var burger=root.querySelector('.burger');
+  if(burger)burger.addEventListener('click',function(){
+    var open=root.classList.toggle('menu-open');burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  root.querySelectorAll('.ddb').forEach(function(b){
+    b.addEventListener('click',function(e){e.stopPropagation();b.closest('.dd').classList.toggle('open');});
+  });
+  document.addEventListener('click',function(e){
+    root.querySelectorAll('.dd.open').forEach(function(d){if(!d.contains(e.target))d.classList.remove('open');});
+  });
+})();
+</script>
+<script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){var c=getComputedStyle(p);if(c.overflowX!=="visible"||c.overflowY!=="visible")p.style.overflow="visible"}})}f();addEventListener("resize",f)})();</script>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/sitewire.js" data-ga4="G-ZVRP0SLZQV" defer></script>
