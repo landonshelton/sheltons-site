@@ -1,7 +1,7 @@
-<div id="spd-live" data-page="media" data-v="a93d5a5587">
+<div id="spd-live" data-page="media" data-v="4e2fccf860">
 <!--
   Shelton's Premium Detail · MEDIA page
-  DRAFT, not reviewed by Landon
+  First shown to him live 2026-10-12 (his ask: "and media page").
   slug:    /media
   source:  walk/index.html, frame #media-f (v0 mockup, never walked with him)
   built:   2026-10-09
@@ -130,6 +130,11 @@
 }
 /* rating dot: Montserrat's period sits wide, pull the digits in around it */
 .spd .sw-dot{margin:0 -.06em}
+/* media: real brand icons; links still waiting on his URLs stay hidden, and a column with none hides */
+.spd .icons svg{width:24px;height:24px;display:block}
+.spd .icons a[data-todo]{display:none}
+.spd .media>div:not(:has(.icons a:not([data-todo]))){display:none}
+.spd .media:not(:has(>div:nth-child(2) .icons a:not([data-todo]))){grid-template-columns:1fr;max-width:520px}
 /* full bleed: break out of the GHL row so the page runs edge to edge */
 .spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
 </style>
@@ -155,8 +160,8 @@
 
 <section class="sec">
   <div class="media">
-    <div><h2>Shelton's Premium Detail</h2><div class="icons"><a href="https://maps.google.com/maps?cid=18272422692036339866" title="Google" aria-label="Google" target="_blank" rel="noopener">G</a><a href="https://www.instagram.com/sheltonspremiumdetail/" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener">&#9678;</a><a href="https://www.facebook.com/profile.php?id=61579896224490" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener">f</a><a href="#" title="YouTube" aria-label="YouTube" data-todo="link">&#9654;</a></div><p>The work, every week. Before and afters, the lake, the trucks.</p></div>
-    <div><h2>Landon Shelton</h2><div class="icons"><a href="#" title="Google" aria-label="Google" data-todo="link">G</a><a href="#" title="Instagram" aria-label="Instagram" data-todo="link">&#9678;</a><a href="#" title="Facebook" aria-label="Facebook" data-todo="link">f</a><a href="#" title="YouTube" aria-label="YouTube" data-todo="link">&#9654;</a></div><p>The owner. How the business runs, what we are building toward.</p></div>
+    <div><h2>Shelton's Premium Detail</h2><div class="icons"><a href="https://maps.google.com/maps?cid=18272422692036339866" title="Google" aria-label="Google" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><path d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></a><a href="https://www.instagram.com/sheltonspremiumdetail/" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/profile.php?id=61579896224490" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></svg></a><a href="#" title="YouTube" aria-label="YouTube" data-todo="link"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a></div><p>The work, every week. Before and afters, the lake, the trucks.</p></div>
+    <div><h2>Landon Shelton</h2><div class="icons"><a href="#" title="Google" aria-label="Google" data-todo="link"><svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><path d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></a><a href="#" title="Instagram" aria-label="Instagram" data-todo="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="#" title="Facebook" aria-label="Facebook" data-todo="link"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></svg></a><a href="#" title="YouTube" aria-label="YouTube" data-todo="link"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a></div><p>The owner. How the business runs, what we are building toward.</p></div>
   </div>
 </section>
 
