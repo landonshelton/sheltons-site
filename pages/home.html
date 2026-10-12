@@ -1,0 +1,252 @@
+<div id="spd-live" data-page="home" data-v="88559c6833">
+<!--
+  Shelton's Premium Detail | HOME
+  slug: /   (GHL page path: home / root)
+  source: walk/index.html, frame #home-f (approved, locked)
+  built: 2026-10-09
+  HOW TO PASTE: GHL -> Sites -> the page -> add ONE full-width section ->
+  drop in ONE Custom Code element -> paste this whole file -> save.
+  Nothing else on the page. Numbers (rating, reviews, vehicles, FAQ prices)
+  are live via sitewire.js; the inline values are the fallback.
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&family=Newsreader:ital,wght@1,400&display=swap">
+<style>
+.spd{--navy:#0b1220;--footer:#080d18;--blue:#3b8fc4;--blue-l:#7fbce4;--blue-bg:#eef6fc;--bg2:#f7f8fa;--soft:#4a5568;--muted:#8896a4;--line:#e8ecf0;--gold:#f59e0b;
+  --h:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;--b:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--s:'Newsreader',Georgia,serif;
+  font-family:var(--b);font-size:16px;color:var(--navy);background:#fff;line-height:1.5;width:100%;max-width:100%;overflow-x:clip;position:relative;text-align:left;-webkit-font-smoothing:antialiased}
+.spd *,.spd *::before,.spd *::after{box-sizing:border-box}
+.spd img{max-width:100%;display:block}
+.spd a{text-decoration:none}
+.spd h1,.spd h2,.spd h3,.spd h4,.spd p{margin:0;padding:0;text-transform:none}
+
+/* announcement (off by default) */
+.spd .ann{background:#fff;color:var(--navy);font:600 12px/1.3 var(--h);letter-spacing:.06em;text-align:center;padding:10px 16px;border-bottom:1px solid var(--line)}
+.spd .ann strong{color:var(--blue);font-weight:800}
+.spd .ann .arr{color:var(--blue);margin-left:6px}
+
+/* bar */
+.spd .bar{background:var(--navy);color:#fff;display:flex;align-items:center;gap:22px;padding:0 28px;height:72px;border-bottom:1px solid rgba(255,255,255,.06);position:relative;z-index:40}
+.spd .brand{display:flex;align-items:center;gap:9px;color:#fff;font:700 13px/1 var(--h);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.spd .brand img{height:36px;width:auto}
+.spd .brand .met{color:var(--blue);font-weight:700}
+.spd .nav{display:flex;gap:26px;margin-left:auto;align-items:center}
+.spd .nav>a,.spd .ddb{color:rgba(255,255,255,.82);font:600 11px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;padding:6px 0;border:0;border-bottom:1.5px solid transparent;background:none;cursor:pointer;border-radius:0;margin:0}
+.spd .nav>a:hover,.spd .dd:hover .ddb,.spd .dd.open .ddb{color:#fff;border-bottom-color:var(--blue)}
+.spd .ddb i{font-style:normal;font-size:9px;margin-left:4px;opacity:.7}
+.spd .dd{position:relative}
+.spd .menu{display:none;position:absolute;top:calc(100% + 14px);left:-14px;min-width:230px;background:#fff;border-radius:10px;box-shadow:0 20px 50px rgba(0,0,0,.35);padding:8px;z-index:50}
+.spd .menu::before{content:'';position:absolute;left:0;right:0;top:-16px;height:16px}
+.spd .dd:hover .menu,.spd .dd.open .menu{display:grid}
+.spd .menu a{color:var(--navy);font:600 12px/1.2 var(--h);letter-spacing:.04em;padding:11px 12px;border-radius:7px;display:flex}
+.spd .menu a:hover{background:var(--blue-bg);color:var(--navy)}
+.spd .cta{background:var(--blue);color:#fff;border-radius:99px;font:700 11px/1 var(--h);letter-spacing:.18em;text-transform:uppercase;padding:13px 22px;white-space:nowrap;display:inline-block;text-align:center;border:0}
+.spd .cta:hover{color:#fff;filter:brightness(1.08)}
+.spd .cta.big{font-size:12px;padding:17px 30px}
+.spd .burger{display:none;background:none;border:0;padding:6px;cursor:pointer;margin:0}
+.spd .burger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0}
+.spd .sheet{display:none}
+
+/* hero */
+.spd .hero{color:#fff;text-align:center;display:grid;gap:18px;justify-items:center;
+  background:linear-gradient(180deg,rgba(11,18,32,.78) 0%,rgba(11,18,32,.62) 55%,rgba(11,18,32,.92) 100%),url(https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/hero-bg.jpg) center 66%/cover no-repeat var(--navy);padding:96px 24px 72px}
+.spd .eyebrow{margin:0;font:700 11px/1 var(--h);letter-spacing:.24em;text-transform:uppercase;color:var(--blue-l)}
+.spd .eyebrow.dark{color:var(--blue)}
+.spd .eyebrow.big{font-size:22px;letter-spacing:.18em;margin:10px 0 12px}
+.spd .hero h1{margin:0;color:#fff;font:700 clamp(27px,3.9vw,46px)/1.12 var(--h);letter-spacing:-.005em;text-wrap:balance;max-width:20ch;text-transform:uppercase}
+.spd .hero .sub{margin:0;font:500 19px/1.5 var(--b);color:#fff;max-width:44ch;text-shadow:0 1px 14px rgba(0,0,0,.45)}
+.spd .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.spd .rating{display:flex;align-items:center;gap:8px;font:500 14px/1 var(--b);color:rgba(255,255,255,.9);flex-wrap:wrap;justify-content:center}
+.spd .rating svg{flex:none}
+.spd .rating .stars{color:var(--gold);letter-spacing:.08em;font-size:15px}
+.spd .rating b{font:800 15px var(--h);color:#fff}
+.spd .rating .sep{opacity:.4}
+
+/* numbers strip */
+.spd .proof{background:var(--bg2);display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:34px 40px;border-bottom:1px solid var(--line)}
+.spd .proof>div{border-left:3px solid var(--blue);padding-left:16px;display:grid;gap:4px;align-content:start;min-width:0}
+.spd .proof b{font:900 clamp(29px,3.2vw,44px)/1 var(--h);letter-spacing:-.02em;color:var(--navy);font-variant-numeric:tabular-nums}
+.spd .proof span{font:700 10.5px/1.3 var(--h);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* sections */
+.spd .sec{padding:72px 40px;background:#fff}
+.spd .sechead{max-width:760px;margin:0 auto 36px;text-align:center;display:grid;gap:12px;justify-items:center}
+.spd .sechead h2{margin:0;color:var(--navy);font:800 clamp(25px,3vw,40px)/1.12 var(--h);letter-spacing:-.02em;text-wrap:balance}
+.spd .lead{margin:0;font:400 17px/1.55 var(--b);color:var(--soft);max-width:60ch}
+
+/* service pills */
+.spd .pick{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:760px;margin:0 auto}
+.spd .pcard{display:grid;gap:10px;justify-items:center;align-content:start;text-align:center;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:10px;padding:0 0 24px;overflow:hidden;min-width:0}
+.spd .pcard:hover{color:var(--navy);box-shadow:0 12px 30px rgba(11,18,32,.08)}
+.spd .pcard img{width:100%;height:240px;object-fit:cover;border-bottom:3px solid var(--blue)}
+.spd .pcard b{font:800 18px var(--h);letter-spacing:.02em;text-transform:uppercase;margin-top:8px}
+.spd .pcard small{font-size:15px;line-height:1.5;color:var(--soft);padding:0 22px}
+.spd .pcard .cta{margin-top:6px}
+
+/* FAQ */
+.spd .faq{max-width:900px;margin:0 auto;display:grid}
+.spd .fi{border:0;border-bottom:1px dashed #1b1a17;border-radius:0;padding:0;margin:0;background:transparent}
+.spd .fi summary{cursor:pointer;font:700 17px/1.3 var(--h);padding:18px 4px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--navy)}
+.spd .fi summary::-webkit-details-marker{display:none}
+.spd .fi summary::after{content:'';flex:none;width:9px;height:9px;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);transform:rotate(45deg);margin:0 8px 4px 0;transition:transform .15s}
+.spd .fi[open] summary::after{transform:rotate(-135deg);margin-bottom:-4px}
+.spd .fi p{margin:0 0 18px;padding:0 4px;font-size:15px;line-height:1.5;color:var(--soft)}
+
+/* owner */
+.spd .owner{display:grid;grid-template-columns:1fr 1.3fr;gap:36px;align-items:center;max-width:1080px;margin:0 auto}
+.spd .owner img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
+.spd .owner>div{display:grid;gap:12px;justify-items:start;min-width:0}
+.spd .owner h2{margin:0;color:var(--navy);font:800 clamp(24px,2.8vw,37px)/1.12 var(--h);letter-spacing:-.02em}
+.spd .owner p{margin:0;font-size:15.5px;line-height:1.5;color:var(--soft);max-width:56ch}
+.spd .owner p.eyebrow{font-size:11px;line-height:1;color:var(--blue)}
+.spd .owner p.sig{font:italic 400 22px var(--s);color:var(--navy)}
+
+/* footer */
+.spd .foot{background:var(--footer);color:rgba(255,255,255,.7);padding:56px 40px 28px}
+.spd .fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:30px;max-width:1180px;margin:0 auto 30px}
+.spd .fcols>div{display:grid;gap:8px;align-content:start;min-width:0}
+.spd .fbrand img{height:48px;width:auto}
+.spd .fbrand p{margin:0;font-size:13.5px;line-height:1.5;max-width:34ch;color:rgba(255,255,255,.7)}
+.spd .fbrand p.frate{color:#fff}
+.spd .foot h4{margin:0 0 4px;font:700 10.5px var(--h);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.spd .foot a{color:rgba(255,255,255,.7);font-size:13.5px;overflow-wrap:break-word}
+.spd .foot a:hover{color:#fff}
+.spd .foot .fsm{margin:0;font-size:12.5px;color:rgba(255,255,255,.7)}
+.spd .foot .copy{margin:0;text-align:center;font-size:12px;color:rgba(255,255,255,.7);border-top:1px solid rgba(255,255,255,.08);padding-top:18px}
+
+@media (max-width:900px){
+  .spd .bar{padding:0 16px;height:60px;gap:12px}
+  .spd .brand span{display:none}
+  .spd .brand img{height:32px}
+  .spd .nav{display:none}
+  .spd .burger{display:block}
+  .spd .bar .cta{padding:11px 16px;font-size:10.5px;margin-left:auto}
+  .spd .sheet{position:absolute;top:60px;left:0;right:0;background:var(--navy);display:none;grid-template-columns:1fr;padding:10px 16px 18px;gap:2px;z-index:60;border-bottom:1px solid rgba(255,255,255,.08)}
+  .spd.menu-open .sheet{display:grid}
+  .spd .sheet .srow{color:#fff;font:600 12px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.08);display:block;margin:0}
+  .spd .sheet summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between}
+  .spd .sheet summary::-webkit-details-marker{display:none}
+  .spd .sheet summary i{font-style:normal;opacity:.6;font-size:10px}
+  .spd .sheet details a{display:flex;color:rgba(255,255,255,.85);font:500 12px/1 var(--b);letter-spacing:.02em;text-transform:none;padding:11px 4px 11px 14px}
+  .spd .hero{padding:56px 18px;background-position:center 62%}
+  .spd .hero h1{font-size:clamp(26px,8vw,33px)}
+  .spd .hero .sub{font-size:16.5px}
+  .spd .btns{flex-direction:column;width:100%}
+  .spd .btns a{text-align:center}
+  .spd .proof{grid-template-columns:1fr 1fr;padding:22px 18px;gap:16px}
+  .spd .sec{padding:48px 18px}
+  .spd .owner{grid-template-columns:1fr;max-width:560px}
+  .spd .fcols{grid-template-columns:1fr 1fr}
+  .spd .foot{padding:44px 18px 24px}
+  .spd .fcols>div{gap:2px}
+  .spd .foot a{padding:6px 0}
+}
+@media (max-width:600px){
+  .spd .eyebrow.big{font-size:18px}
+  .spd .pick{grid-template-columns:1fr;max-width:400px}
+  .spd .pcard img{height:220px}
+  .spd .fi summary{font-size:16px}
+  .spd .fbrand{grid-column:1 / -1}
+  .spd .fcols>div:last-child{grid-column:1 / -1}
+}
+/* full bleed: break out of the GHL row so the page runs edge to edge */
+.spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
+</style>
+
+<div class="spd spd-home" id="spd-home">
+<!-- ANNOUNCEMENT BAR is off. To switch it on, uncomment the one line below (keep the text as is or edit the offer). -->
+<!-- <div class="ann">NEW&nbsp; <strong>Fall openings:</strong> booking Full Details through October 18th <span class="arr">→</span></div> -->
+
+<header class="bar">
+  <a class="brand" href="/"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest"><span><b class="met">Shelton's</b> Premium Detail</span></a>
+  <nav class="nav">
+    <div class="dd"><button class="ddb" type="button" aria-expanded="false">Services <i>▾</i></button><div class="menu"><a href="/services">Services</a><a href="/maintenance">Maintenance</a><a href="/detailing">Detailing</a></div></div>
+    <a href="/media">Media</a><a href="/maintenance">Maintenance</a>
+  </nav>
+  <a class="cta" href="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" target="_blank" rel="noopener">Book Now</a>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="sheet">
+    <details class="srow"><summary>Services <i>▾</i></summary><a href="/services">Services</a><a href="/maintenance">Maintenance</a><a href="/detailing">Detailing</a></details>
+    <a class="srow" href="/media">Media</a><a class="srow" href="/maintenance">Maintenance</a>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="eyebrow">Cedar Creek Lake owners</p>
+  <h1>Want it done right the first time?</h1>
+  <p class="sub">The highest-rated detailer on Cedar Creek Lake, at your driveway. Hand us the keys and go about your day.</p>
+  <div class="btns"><a class="cta big" href="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" target="_blank" rel="noopener">Book Now</a></div>
+  <div class="rating"><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="stars">★★★★★</span><b data-live="rating">5.0</b><span class="sep">|</span><span><span data-live="reviews">85</span> reviews</span></div>
+</section>
+
+<section class="proof">
+  <div><b data-live="rating">5.0</b><span>Google rating</span></div>
+  <div><b data-live="reviews">85</b><span>Five-star reviews</span></div>
+  <div><b data-live="vehicles">188</b><span>Vehicles detailed</span></div>
+  <div><b>#1</b><span>Rated in Cedar Creek Lake</span></div>
+</section>
+
+<section class="sec">
+  <div class="sechead"><p class="eyebrow dark big">Services</p><p class="lead">Pick the one that fits. Each page walks the process and what it does for the vehicle.</p></div>
+  <div class="pick">
+    <a class="pcard" href="/detailing"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/card-cayenne2.jpg" alt="" loading="lazy"><b>Detailing</b><small>Inside and out, professional-standard detailing made to clean the vehicle and bring it back to our standard.</small><span class="cta">Bring it back</span></a>
+    <a class="pcard" href="/maintenance"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/card-lc-front.jpg" alt="" loading="lazy"><b>Maintenance</b><small>Every two weeks our professional crew comes to you and brings your vehicle back to brand new.</small><span class="cta">Never worry again</span></a>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sechead"><h2>FAQ</h2></div>
+  <div class="faq">
+    <details class="fi"><summary>What is Shelton's Premium Detail?</summary><p>A mobile detailing company on Cedar Creek Lake. We come to your driveway, use your water spigot and an outlet, and hand your vehicle back looking like the day you bought it. The highest-rated detailer on the lake, by a long way.</p></details>
+    <details class="fi"><summary>How do I schedule a detail?</summary><p>Hit Book Now. Pick your vehicle size, pick the service, pick a day and time that works, and you're booked. We text to confirm, show up when we said, and walk the vehicle with you before we start. No deposit, no phone tag.</p></details>
+    <details class="fi"><summary>Who is this for?</summary><p>Owners who want it done right, not fast. New cars you want to keep new, lake cars that live in the sun, work trucks, busy lake moms who'd rather not clean up after the kids, Porsches, and the Corvette you only drive on Sundays.</p></details>
+    <details class="fi"><summary>How much does it cost?</summary><p>A Full Detail starts at <span data-price="bBm4hssJTOVp3PsH9DPN" data-tier="Coupe/Sedan">$300</span> for a coupe or sedan, <span data-price="bBm4hssJTOVp3PsH9DPN" data-tier="Small/Midsize Suv">$330</span> for a small or mid SUV, <span data-price="bBm4hssJTOVp3PsH9DPN" data-tier="Truck/Large Suv">$370</span> for a truck or large SUV. Exterior-only and interior-only tiers run less. Every price shows in Book Now before you commit, and there's nothing added on the day.</p></details>
+    <details class="fi"><summary>What's the difference between a detail and a car wash?</summary><p>A wash gets the loose dirt off and puts swirls in your paint doing it. A detail starts with a foam pre-wash and a two-bucket hand wash, then clay and iron to pull out what's bonded to the paint, then a sealant so it stays slick for months. Inside, every panel, vent, seam and seat gets cleaned and fed, not wiped. It's three to six hours on the vehicle for a reason.</p></details>
+    <details class="fi"><summary>What if I'm not happy with it?</summary><p>Call or text within 48 hours and we come back and make it right, no charge and no argument. If you're not happy, we aren't happy. Eighty-five five-star reviews and that promise has been used twice.</p></details>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="owner">
+    <img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/owner-landon.jpg" alt="Landon Shelton, owner" loading="lazy">
+    <div>
+      <p class="eyebrow dark">The owner</p>
+      <h2>Founded at 17. Highest rated in year one.</h2>
+      <p>Shelton's started because detailing around the lake had gotten lazy. Sixty-minute "details" with a brush and a spray wax. Owners who cared about their vehicles deserved the standard they'd hold themselves to, so that's what we built: at your driveway, done the right way by trained professionals, whether you're daily driving a Porsche or it's your ZR1 Corvette track car.</p>
+      <p>If you're not happy, we aren't happy.</p>
+      <p class="sig">Landon Shelton</p>
+      <a class="cta" href="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" target="_blank" rel="noopener">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="fcols">
+    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5.0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
+    <div><h4>Services</h4><a href="/detailing">Full Detail</a><a href="/detailing">Interior Detail</a><a href="/detailing">Exterior Detail</a><a href="/maintenance">Maintenance</a></div>
+    <div><h4>Company</h4><a href="https://maps.google.com/maps?cid=18272422692036339866" target="_blank" rel="noopener">Google Reviews</a><a href="https://www.instagram.com/sheltonspremiumdetail/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61579896224490" target="_blank" rel="noopener">Facebook</a><a href="/privacypolicy">Privacy Policy</a></div>
+    <div><h4>Reach us</h4><a href="tel:+19036036017">(903) 603-6017</a><a href="mailto:landonshelton@sheltonspremiumdetail.com">landonshelton@<wbr>sheltonspremiumdetail.com</a><p class="fsm">Mobile across Henderson County and Cedar Creek Lake.</p></div>
+  </div>
+  <p class="copy">© 2026 Shelton's Premium Detail · Cedar Creek Lake, TX</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('spd-home'); if(!root) return;
+  var burger=root.querySelector('.burger');
+  if(burger) burger.addEventListener('click',function(){
+    var open=root.classList.toggle('menu-open'); burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  root.querySelectorAll('.ddb').forEach(function(b){
+    b.addEventListener('click',function(e){
+      e.stopPropagation(); var dd=b.closest('.dd'); var open=dd.classList.toggle('open'); b.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+  document.addEventListener('click',function(e){
+    root.querySelectorAll('.dd.open').forEach(function(dd){ if(!dd.contains(e.target)){dd.classList.remove('open');dd.querySelector('.ddb').setAttribute('aria-expanded','false');} });
+  });
+})();
+</script>
+<script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){if(getComputedStyle(p).overflowX!=="visible")p.style.overflowX="visible"}})}f();addEventListener("resize",f)})();</script>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/sitewire.js" data-ga4="G-ZVRP0SLZQV" defer></script>

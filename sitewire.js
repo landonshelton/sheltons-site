@@ -8,12 +8,19 @@
  *  <script src=".../sitewire.js" data-ga4="G-XXXXXXX" defer></script>  GA4 site visits
  *
  * Inline text is the fallback: if the data can't load, the page keeps what was pasted.
+ *
+ * Live code: the pasted element is wrapped in <div id="spd-live" data-page="home" data-v="HASH">.
+ * On load this fetches pages/<page>.html from the repo; if its data-v differs, the
+ * wrapper's contents are swapped for the new version and its scripts re-run. So a push
+ * to sheltons-site reaches the site in minutes with no re-paste. The pasted copy stays
+ * as the fallback and as what search engines read first.
  */
 (function () {
   var me = document.currentScript || document.querySelector('script[src*="sitewire.js"]');
   var DATA = (me && me.getAttribute('data-base')) ||
     'https://raw.githubusercontent.com/landonshelton/sheltons-site/main/live/';
   var GA4 = me && me.getAttribute('data-ga4');
+  var PAGES = DATA.replace(/live\/$/, 'pages/');
 
   function get(name) {
     return fetch(DATA + name + '?t=' + Math.floor(Date.now() / 600000), { cache: 'no-store' })
@@ -92,7 +99,26 @@
     }, true);
   }
 
-  function all() { numbers(); prices(); reviews(); }
+  function swap() {
+    var w = document.getElementById('spd-live');
+    if (!w || !w.getAttribute('data-page')) return Promise.resolve();
+    return fetch(PAGES + w.getAttribute('data-page') + '.html?t=' + Math.floor(Date.now() / 60000), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw r.status; return r.text(); })
+      .then(function (t) {
+        var n = new DOMParser().parseFromString(t, 'text/html').getElementById('spd-live');
+        if (!n || !n.getAttribute('data-v') || n.getAttribute('data-v') === w.getAttribute('data-v')) return;
+        w.innerHTML = n.innerHTML;
+        w.setAttribute('data-v', n.getAttribute('data-v'));
+        w.querySelectorAll('script').forEach(function (old) {
+          var s = document.createElement('script');
+          for (var i = 0; i < old.attributes.length; i++) s.setAttribute(old.attributes[i].name, old.attributes[i].value);
+          s.text = old.text;
+          old.replaceWith(s);
+        });
+      }).catch(function () {});
+  }
+
+  function all() { swap().then(function () { numbers(); prices(); reviews(); }); }
   ga4();
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', all); else all();
   setInterval(numbers, 15 * 60 * 1000);

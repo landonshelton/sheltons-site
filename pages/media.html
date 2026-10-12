@@ -1,0 +1,175 @@
+<div id="spd-live" data-page="media" data-v="fa77b3469d">
+<!--
+  Shelton's Premium Detail · MEDIA page
+  DRAFT, not reviewed by Landon
+  slug:    /media
+  source:  walk/index.html, frame #media-f (v0 mockup, never walked with him)
+  built:   2026-10-09
+  paste:   GHL -> Sites -> this page -> add ONE full-width section -> add a
+           Custom Code element -> paste this whole file -> save. Nothing else
+           on the page. Live numbers (rating, review count in the footer) come
+           from sitewire.js at the bottom; the inline numbers are the fallback.
+  links still needed (href="#", marked data-todo): Shelton's YouTube, and all
+           four of Landon's own accounts (Google, Instagram, Facebook, YouTube).
+  announcement bar: off. To switch on, delete the two comment marks around
+           the ANNOUNCEMENT line just under <div class="spd spd-media">.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+.spd{--navy:#0b1220;--footer:#080d18;--blue:#3b8fc4;--blue-l:#7fbce4;--blue-bg:#eef6fc;--bg2:#f7f8fa;--soft:#4a5568;--muted:#8896a4;--line:#e8ecf0;--gold:#f59e0b;--h:'Montserrat',system-ui,sans-serif;--b:'Inter',system-ui,sans-serif;
+  font-family:var(--b);font-size:16px;color:var(--navy);background:#fff;position:relative;width:100%;min-width:0;line-height:1.5;text-align:left;overflow-x:clip;-webkit-font-smoothing:antialiased}
+.spd *,.spd *::before,.spd *::after{box-sizing:border-box}
+.spd img{max-width:100%;border:0}
+.spd p,.spd h2,.spd h4{margin:0}
+.spd a{text-decoration:none}
+
+/* announcement (off by default) */
+.spd .ann{background:#fff;color:var(--navy);font:600 12px/1.3 var(--h);letter-spacing:.06em;text-align:center;padding:10px 16px;border-bottom:1px solid var(--line)}
+.spd .ann strong{color:var(--blue);font-weight:800}
+.spd .ann .arr{color:var(--blue);margin-left:6px}
+
+/* nav bar */
+.spd .bar{background:var(--navy);color:#fff;display:flex;align-items:center;gap:22px;padding:0 28px;height:72px;border-bottom:1px solid rgba(255,255,255,.06);position:relative;z-index:40}
+.spd .brand{display:flex;align-items:center;gap:9px;color:#fff;font:700 13px/1 var(--h);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.spd .brand img{height:36px;width:auto;display:block}
+.spd .brand .met{color:var(--blue);font-weight:700}
+.spd .nav{display:flex;gap:26px;margin-left:auto;align-items:center}
+.spd .nav>a,.spd .ddb{color:rgba(255,255,255,.82);font:600 11px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;padding:6px 0;margin:0;border:0;border-bottom:1.5px solid transparent;border-radius:0;background:none;cursor:pointer;box-shadow:none}
+.spd .nav>a:hover,.spd .dd:hover .ddb,.spd .dd.open .ddb{color:#fff;border-bottom-color:var(--blue)}
+.spd .ddb i{font-style:normal;font-size:9px;margin-left:4px;opacity:.7}
+.spd .dd{position:relative}
+.spd .dd::after{content:'';position:absolute;left:0;right:0;top:100%;height:16px}
+.spd .menu{display:none;position:absolute;top:calc(100% + 14px);left:-14px;min-width:230px;background:#fff;border-radius:10px;box-shadow:0 20px 50px rgba(0,0,0,.35);padding:8px;z-index:50}
+.spd .dd:hover .menu,.spd .dd.open .menu{display:grid}
+.spd .menu a{color:var(--navy);font:600 12px/1.2 var(--h);letter-spacing:.04em;padding:11px 12px;border-radius:7px;display:flex}
+.spd .menu a:hover{background:var(--blue-bg)}
+.spd .cta{background:var(--blue);color:#fff;border-radius:99px;font:700 11px/1 var(--h);letter-spacing:.18em;text-transform:uppercase;padding:13px 22px;white-space:nowrap;display:inline-block;text-align:center}
+.spd .cta:hover{color:#fff;filter:brightness(1.07)}
+.spd .burger{display:none;background:none;border:0;padding:6px;margin:0;cursor:pointer;box-shadow:none}
+.spd .burger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0}
+.spd .sheet{display:none}
+
+/* hero (short, navy) */
+.spd .hero{background:var(--navy);color:#fff;text-align:center;display:grid;gap:18px;justify-items:center;padding:56px 24px 44px}
+.spd .hero h1{margin:0;color:#fff;font:700 clamp(27px,3.9vw,46px)/1.12 var(--h);letter-spacing:-.005em;text-wrap:balance;max-width:20ch;text-transform:uppercase}
+
+/* sections */
+.spd .sec{padding:72px 40px;background:#fff}
+
+/* media: two columns */
+.spd .media{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;margin:0 auto;text-align:center}
+.spd .media>div{min-width:0}
+.spd .media h2{margin:0 0 14px;color:var(--navy);font:900 clamp(22px,2.6vw,32px)/1.1 var(--h);text-transform:uppercase;letter-spacing:-.01em;overflow-wrap:break-word}
+.spd .media p{margin:14px 0 0;color:var(--soft);font-size:14.5px}
+.spd .icons{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+.spd .icons a{width:56px;height:56px;border-radius:50%;border:2px solid var(--navy);display:grid;place-items:center;color:var(--navy);font:800 20px/1 var(--h);transition:background .15s,color .15s}
+.spd .icons a:hover{background:var(--navy);color:#fff}
+.spd .media>div:nth-child(2) .icons a{border-color:var(--blue);color:var(--blue)}
+.spd .media>div:nth-child(2) .icons a:hover{background:var(--blue);color:#fff}
+
+/* footer */
+.spd .foot{background:var(--footer);color:rgba(255,255,255,.7);padding:56px 40px 28px}
+.spd .fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:30px;max-width:1180px;margin:0 auto 30px}
+.spd .fcols>div{display:grid;gap:8px;align-content:start;min-width:0}
+.spd .fbrand img{height:48px;width:auto;display:block}
+.spd .fbrand p{font-size:13.5px;max-width:34ch;color:rgba(255,255,255,.7)}
+.spd .fbrand .frate{color:#fff}
+.spd .foot h4{margin:0 0 4px;font:700 10.5px var(--h);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.spd .foot a{color:rgba(255,255,255,.7);font-size:13.5px;overflow-wrap:anywhere}
+.spd .foot a:hover{color:#fff}
+.spd .fsm{font-size:12.5px}
+.spd .copy{text-align:center;font-size:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:18px}
+
+@media (max-width:900px){
+  .spd .bar{padding:0 16px;height:60px;gap:12px}
+  .spd .brand span{display:none}
+  .spd .brand img{height:32px}
+  .spd .nav{display:none}
+  .spd .burger{display:block}
+  .spd .bar .cta{padding:11px 16px;font-size:10.5px;margin-left:auto}
+  .spd .sheet{position:absolute;top:60px;left:0;right:0;background:var(--navy);display:none;grid-template-columns:1fr;padding:10px 16px 18px;gap:2px;z-index:60;border-bottom:1px solid rgba(255,255,255,.08)}
+  .spd.menu-open .sheet{display:grid}
+  .spd .sheet .srow{color:#fff;font:600 12px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.08);display:block}
+  .spd .sheet summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between}
+  .spd .sheet summary::-webkit-details-marker{display:none}
+  .spd .sheet summary i{font-style:normal;opacity:.6;font-size:10px}
+  .spd .sheet details a{display:flex;color:rgba(255,255,255,.85);font:500 12px/1 var(--b);letter-spacing:.02em;text-transform:none;padding:11px 4px 11px 14px}
+  .spd .fcols{grid-template-columns:1fr 1fr}
+  .spd .foot{padding:48px 18px 24px}
+  .spd .hero{padding:56px 18px}
+  .spd .sec{padding:48px 18px}
+  .spd .media{grid-template-columns:1fr;max-width:520px;gap:44px}
+}
+@media (max-width:600px){
+  .spd .hero h1{font-size:clamp(26px,8vw,33px)}
+  .spd .icons{gap:12px}
+  .spd .icons a{width:52px;height:52px;font-size:19px}
+  .spd .fcols{gap:26px 20px}
+  .spd .fbrand,.spd .freach{grid-column:1 / -1}
+  .spd .fcols>div:not(.fbrand){gap:0}
+  .spd .fcols>div:not(.fbrand) h4{margin-bottom:6px}
+  .spd .foot a{padding:10px 0}
+}
+/* full bleed: break out of the GHL row so the page runs edge to edge */
+.spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
+</style>
+
+<div class="spd spd-media">
+<!-- ANNOUNCEMENT <div class="ann">NEW&nbsp; <strong>Fall openings:</strong> booking Full Details through October 18th <span class="arr">→</span></div> ANNOUNCEMENT -->
+
+<header class="bar">
+  <a class="brand" href="/"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest"><span><b class="met">Shelton's</b> Premium Detail</span></a>
+  <nav class="nav">
+    <div class="dd"><button class="ddb" type="button" aria-haspopup="true">Services <i>▾</i></button><div class="menu"><a href="/services">Services</a><a href="/maintenance">Maintenance</a><a href="/detailing">Detailing</a></div></div>
+    <a href="/media">Media</a><a href="/maintenance">Maintenance</a>
+  </nav>
+  <a class="cta" href="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" target="_blank" rel="noopener">Book Now</a>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="sheet">
+    <details class="srow"><summary>Services <i>▾</i></summary><a href="/services">Services</a><a href="/maintenance">Maintenance</a><a href="/detailing">Detailing</a></details>
+    <a class="srow" href="/media">Media</a><a class="srow" href="/maintenance">Maintenance</a>
+  </div>
+</header>
+
+<section class="hero"><h1>Our media.</h1></section>
+
+<section class="sec">
+  <div class="media">
+    <div><h2>Shelton's Premium Detail</h2><div class="icons"><a href="https://maps.google.com/maps?cid=18272422692036339866" title="Google" aria-label="Google" target="_blank" rel="noopener">G</a><a href="https://www.instagram.com/sheltonspremiumdetail/" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener">&#9678;</a><a href="https://www.facebook.com/profile.php?id=61579896224490" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener">f</a><a href="#" title="YouTube" aria-label="YouTube" data-todo="link">&#9654;</a></div><p>The work, every week. Before and afters, the lake, the trucks.</p></div>
+    <div><h2>Landon Shelton</h2><div class="icons"><a href="#" title="Google" aria-label="Google" data-todo="link">G</a><a href="#" title="Instagram" aria-label="Instagram" data-todo="link">&#9678;</a><a href="#" title="Facebook" aria-label="Facebook" data-todo="link">f</a><a href="#" title="YouTube" aria-label="YouTube" data-todo="link">&#9654;</a></div><p>The owner. How the business runs, what we are building toward.</p></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="fcols">
+    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest" loading="lazy"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5.0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
+    <div><h4>Services</h4><a href="/detailing">Full Detail</a><a href="/detailing">Interior Detail</a><a href="/detailing">Exterior Detail</a><a href="/maintenance">Maintenance</a></div>
+    <div><h4>Company</h4><a href="https://maps.google.com/maps?cid=18272422692036339866" target="_blank" rel="noopener">Google Reviews</a><a href="https://www.instagram.com/sheltonspremiumdetail/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61579896224490" target="_blank" rel="noopener">Facebook</a><a href="/privacypolicy">Privacy Policy</a></div>
+    <div class="freach"><h4>Reach us</h4><a href="tel:+19036036017">(903) 603-6017</a><a href="mailto:landonshelton@sheltonspremiumdetail.com">landonshelton@<wbr>sheltonspremiumdetail.com</a><p class="fsm">Mobile across Henderson County and Cedar Creek Lake.</p></div>
+  </div>
+  <p class="copy">© 2026 Shelton's Premium Detail · Cedar Creek Lake, TX</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.currentScript&&document.currentScript.previousElementSibling;
+  if(!root||!root.classList||!root.classList.contains('spd'))root=document.querySelector('.spd.spd-media');
+  if(!root)return;
+  var burger=root.querySelector('.burger');
+  if(burger)burger.addEventListener('click',function(){
+    var open=root.classList.toggle('menu-open');burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  root.querySelectorAll('.ddb').forEach(function(b){
+    b.addEventListener('click',function(e){e.stopPropagation();b.closest('.dd').classList.toggle('open');});
+  });
+  document.addEventListener('click',function(e){
+    root.querySelectorAll('.dd.open').forEach(function(d){if(!d.contains(e.target))d.classList.remove('open');});
+  });
+})();
+</script>
+<script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){if(getComputedStyle(p).overflowX!=="visible")p.style.overflowX="visible"}})}f();addEventListener("resize",f)})();</script>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/sitewire.js" data-ga4="G-ZVRP0SLZQV" defer></script>

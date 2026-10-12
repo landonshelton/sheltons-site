@@ -1,0 +1,350 @@
+<div id="spd-live" data-page="ceramic-coating" data-v="87366ddb70">
+<!--
+  Shelton's Premium Detail · CERAMIC COATING page (PARKED)
+  slug:    /ceramic-coating
+  source:  cer/index.html, frame #cer-f (approved mockup)
+  built:   2026-10-09
+  paste:   GHL -> Sites -> this page -> add ONE full-width section -> add a
+           Custom Code element -> paste this whole file -> save. Nothing else
+           on the page. Selling page: no nav bar, crest top-left in the hero.
+  parked:  built, not linked from any other page, not advertised. No prices
+           anywhere on this page: every coating is quoted in person.
+  live:    rating + review count (data-live: hero, review-board heading,
+           closing banner, footer) come from sitewire.js at the bottom; the
+           inline numbers are what shows if the data can't load. The review
+           board is static for now; see the LIVE REVIEWS note above it.
+  booking: the window under #book is the live Urable shop root. Every
+           button on the page scrolls to it.
+  announcement bar: off. To switch on, delete the two comment marks around
+           the ANNOUNCEMENT line just under <div class="spd spd-ceramic-coating">.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+.spd{--navy:#0b1220;--footer:#080d18;--blue:#3b8fc4;--blue-l:#7fbce4;--blue-bg:#eef6fc;--bg2:#f7f8fa;--soft:#4a5568;--muted:#8896a4;--line:#e8ecf0;--gold:#f59e0b;--h:'Montserrat',system-ui,sans-serif;--b:'Inter',system-ui,sans-serif;
+  font-family:var(--b);font-size:16px;color:var(--navy);background:#fff;position:relative;width:100%;min-width:0;line-height:1.5;text-align:left;overflow-x:clip;-webkit-font-smoothing:antialiased}
+.spd *,.spd *::before,.spd *::after{box-sizing:border-box}
+.spd img{max-width:100%;border:0}
+.spd p,.spd h1,.spd h2,.spd h4,.spd ul,.spd ol{margin:0}
+.spd a{text-decoration:none}
+
+/* announcement (off by default) */
+.spd .ann{background:#fff;color:var(--navy);font:600 12px/1.3 var(--h);letter-spacing:.06em;text-align:center;padding:10px 16px;border-bottom:1px solid var(--line)}
+.spd .ann strong{color:var(--blue);font-weight:800}
+.spd .ann .arr{color:var(--blue);margin-left:6px}
+
+/* buttons */
+.spd .cta{background:var(--blue);color:#fff;border-radius:99px;font:700 11px/1 var(--h);letter-spacing:.18em;text-transform:uppercase;padding:13px 22px;white-space:nowrap;display:inline-block;text-align:center}
+.spd .cta.big{font-size:12px;padding:17px 30px}
+.spd .cta:hover{color:#fff;filter:brightness(1.07)}
+.spd .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+
+/* hero + photo banners */
+.spd .hero{background:var(--navy);color:#fff;text-align:center;padding:96px 24px 72px;display:grid;gap:18px;justify-items:center}
+.spd .chero{position:relative;background:linear-gradient(180deg,rgba(11,18,32,.72) 0%,rgba(11,18,32,.55) 55%,rgba(11,18,32,.92) 100%),url(https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/cp-c3.jpg) center 55%/cover no-repeat}
+.spd .chero .crest{position:absolute;top:18px;left:22px;height:48px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.4))}
+.spd .hero h1,.spd .pbh{margin:0;font:700 clamp(1.7rem,3.9vw,2.9rem)/1.12 var(--h);letter-spacing:-.005em;text-wrap:balance;max-width:20ch;text-transform:uppercase;color:#fff}
+.spd .hero .sub{margin:0;font:400 17px/1.5 var(--b);color:rgba(255,255,255,.82);max-width:44ch;text-shadow:0 1px 10px rgba(0,0,0,.35)}
+.spd .pbanner{background-size:cover;background-position:center 55%;background-repeat:no-repeat;padding:110px 24px 90px}
+.spd .pbanner .sub{color:rgba(255,255,255,.85)}
+.spd .rating{display:flex;align-items:center;gap:8px;font:500 14px/1 var(--b);color:rgba(255,255,255,.9)}
+.spd .rating svg{width:18px;height:18px;flex:none}
+.spd .rating .stars{color:var(--gold);letter-spacing:.08em;font-size:15px}
+.spd .rating b{font:800 15px var(--h)}
+.spd .rating .sep{opacity:.4}
+
+/* sections */
+.spd .sec{padding:72px 40px;background:#fff}
+.spd .sec.alt{background:var(--bg2)}
+.spd .sechead{max-width:760px;margin:0 auto 36px;text-align:center;display:grid;gap:12px;justify-items:center}
+.spd .sechead h2{font:800 clamp(1.6rem,3vw,2.5rem)/1.12 var(--h);letter-spacing:-.02em;text-wrap:balance;color:var(--navy)}
+
+/* proof: hand-picked Google reviews */
+.spd .gcards{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.spd .gcard,.spd .sw-review{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px;box-shadow:0 10px 30px rgba(11,18,32,.12);font-family:var(--b);min-width:0}
+.spd .t0{transform:rotate(-2deg)}
+.spd .t1{transform:rotate(1.5deg) translateY(-10px)}
+.spd .t2{transform:rotate(2.5deg)}
+.spd .ghead,.spd .sw-rhead{display:flex;gap:10px;align-items:center}
+.spd .gav,.spd .sw-av{width:36px;height:36px;min-width:36px;border-radius:50%;object-fit:cover;flex:none;display:block}
+.spd .ghead b,.spd .sw-rhead b{display:block;font:600 14px/1.4 var(--b);color:var(--navy)}
+.spd .ghead small,.spd .sw-rhead small{display:block;color:var(--muted);font-size:12px}
+.spd .gstars{display:flex;gap:8px;align-items:center;margin:8px 0}
+.spd .gstars span,.spd .sw-stars{color:var(--gold);font-size:13px;letter-spacing:1px}
+.spd .sw-stars{margin:8px 0}
+.spd .gstars small{color:var(--muted);font-size:12px}
+.spd .gstars svg{width:18px;height:18px;flex:none;margin-left:auto}
+.spd .gcard p,.spd .sw-review p{margin:0 0 10px;font-size:13.5px;line-height:1.5;color:var(--navy);overflow-wrap:anywhere}
+.spd .gcard mark{background:#fff3a3;color:inherit;padding:0 2px}
+.spd .gcard>img,.spd .sw-photo{width:120px;height:90px;object-fit:cover;border-radius:4px;display:block}
+.spd .disc{max-width:62ch;margin:34px auto 0;text-align:center;font-size:13px;color:var(--muted)}
+
+/* package checklists */
+.spd .snips{padding:44px 24px 56px}
+.spd .snl{list-style:none;margin:0 auto;padding:0;max-width:1000px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px 40px}
+.spd .snl li{position:relative;margin:0;padding-left:34px;font:400 17px/1.5 var(--b);color:var(--soft)}
+.spd .snl li b{font-weight:700;color:var(--navy)}
+.spd .snl li::before{content:'';position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:50%;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+
+/* add-ons: two cards side by side, no carousel */
+.spd .adsec{padding-top:44px;padding-bottom:56px}
+.spd .ad2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:820px;margin:0 auto}
+.spd .adp{min-width:0;background:#fff;border:1px solid #eef1f4;border-radius:26px;padding:14px 14px 20px;box-shadow:0 10px 28px rgba(11,18,32,.10);text-align:center}
+.spd .adp img{width:100%;aspect-ratio:1;border-radius:16px;object-fit:cover;display:block}
+.spd .adp b{display:block;margin-top:16px;font:800 18px/1.25 var(--h);text-transform:uppercase;letter-spacing:.02em;color:var(--navy)}
+.spd .adp p{margin:6px 8px 0;font:400 15px/1.45 var(--b);color:var(--soft)}
+
+/* how it works */
+.spd .steps{list-style:none;margin:0 auto;padding:0;max-width:760px;display:grid;grid-template-columns:1fr;gap:14px}
+.spd .steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.spd .steps b{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font:800 16px var(--h)}
+.spd .steps h4{margin:4px 0;font:700 16px/1.2 var(--h);color:var(--navy)}
+.spd .steps p{margin:0;font-size:14.5px;line-height:1.5;color:var(--soft)}
+.spd .btns.mid{justify-content:center;display:flex;margin-top:30px}
+
+/* review board (hand-picked; see LIVE REVIEWS note) */
+.spd .gcards.board{grid-template-columns:repeat(5,1fr);max-width:1300px;gap:0 2px;padding:10px 0 26px;overflow:hidden;align-items:start}
+.spd .board>*{box-shadow:0 8px 24px rgba(11,18,32,.16);padding:12px;margin:-14px -6px 0;font-size:12.5px}
+.spd .board>* p{font-size:12.5px;margin-bottom:6px}
+.spd .board .gcard>img,.spd .board .sw-photo{width:100px;height:72px}
+.spd .board>:nth-child(6n+1){transform:rotate(-2.5deg)}
+.spd .board>:nth-child(6n+2){transform:rotate(1.5deg) translateY(10px)}
+.spd .board>:nth-child(6n+3){transform:rotate(-1deg) translateY(-6px)}
+.spd .board>:nth-child(6n+4){transform:rotate(2.5deg) translateY(8px)}
+.spd .board>:nth-child(6n+5){transform:rotate(-1.5deg)}
+.spd .board>:nth-child(6n){transform:rotate(1deg) translateY(12px)}
+.spd .board>:nth-child(odd){z-index:2;position:relative}
+.spd .board>:nth-child(3n){z-index:3;position:relative}
+.spd .board.sw-filled>*{margin:0 4px 18px}
+
+/* booking window (live Urable shop) */
+.spd .bookfull{background:#fff;padding:0}
+.spd .bookfull iframe{width:100%;height:900px;display:block;border:0}
+.spd .booklink{text-align:center;font-size:13px;padding:10px 16px 14px;color:var(--muted)}
+.spd .booklink a{color:var(--blue);font-weight:600}
+
+/* FAQ (open) */
+.spd .faqo{max-width:900px;margin:0 auto;display:grid;gap:40px}
+.spd .foq{background:var(--navy);color:#fff;border-radius:10px;padding:20px 52px;font:800 clamp(1.1rem,2.2vw,1.6rem)/1.2 var(--h);text-align:center;position:relative}
+.spd .foq span{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-weight:400;opacity:.8}
+.spd .foa{padding:8px 16px 0}
+.spd .foa p{margin:0 0 16px;font:400 18px/1.5 var(--b);color:var(--navy)}
+.spd .foa p b{font-weight:700}
+
+/* footer */
+.spd .foot{background:var(--footer);color:rgba(255,255,255,.7);padding:56px 40px 28px}
+.spd .fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:30px;max-width:1180px;margin:0 auto 30px}
+.spd .fcols>div{display:grid;gap:8px;align-content:start;min-width:0}
+.spd .fbrand img{height:48px;width:auto;display:block}
+.spd .fbrand p{font-size:13.5px;max-width:34ch;color:rgba(255,255,255,.7)}
+.spd .fbrand .frate{color:#fff}
+.spd .foot h4{margin:0 0 4px;font:700 10.5px var(--h);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.spd .foot a{color:rgba(255,255,255,.7);font-size:13.5px;overflow-wrap:anywhere}
+.spd .foot a:hover{color:#fff}
+.spd .fsm{font-size:12.5px}
+.spd .copy{text-align:center;font-size:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:18px}
+
+@media (max-width:1000px){
+  .spd .gcards.board{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:900px){
+  .spd .hero h1,.spd .pbh{font-size:clamp(1.65rem,8vw,2.05rem)}
+  .spd .btns{flex-direction:column;width:100%}
+  .spd .btns a{text-align:center}
+  .spd .pbanner{padding:72px 18px 60px}
+  .spd .sec{padding:48px 18px}
+  .spd .snips{padding:40px 18px 48px}
+  .spd .snl{grid-template-columns:1fr}
+  .spd .gcards{grid-template-columns:1fr;max-width:560px}
+  .spd .t0,.spd .t1,.spd .t2{transform:none}
+  .spd .fcols{grid-template-columns:1fr 1fr}
+  .spd .foot{padding:48px 18px 24px}
+}
+@media (max-width:600px){
+  .spd .chero .crest{top:14px;left:16px;height:42px}
+  .spd .adsec{padding-top:30px;padding-bottom:40px}
+  .spd .ad2{grid-template-columns:1fr;max-width:340px}
+  .spd .gcards.board{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 8px;padding:6px 4px 16px;max-width:none}
+  .spd .board>*{margin:0;padding:10px}
+  .spd .board>:nth-child(odd){transform:rotate(-1deg)}
+  .spd .board>:nth-child(even){transform:rotate(1deg)}
+  .spd .board .ghead,.spd .board .sw-rhead{gap:8px}
+  .spd .board .gav,.spd .board .sw-av{width:30px;height:30px;min-width:30px}
+  .spd .board .ghead b,.spd .board .sw-rhead b{font-size:13px;line-height:1.25}
+  .spd .board .gstars{gap:5px;flex-wrap:nowrap}
+  .spd .board .gstars span{font-size:10px;letter-spacing:0;white-space:nowrap}
+  .spd .board .gstars small{font-size:11px;white-space:nowrap}
+  .spd .board .gstars svg{width:14px;height:14px}
+  .spd .board .gcard>img,.spd .board .sw-photo{width:100%;height:auto;aspect-ratio:4/3}
+  .spd .bookfull iframe{height:760px}
+  .spd .faqo{gap:30px}
+  .spd .foq{padding:16px 40px;font-size:1.1rem}
+  .spd .foq span{right:14px}
+  .spd .foa{padding:8px 4px 0}
+  .spd .foa p{font-size:16.5px}
+  .spd .fcols{gap:26px 20px}
+  .spd .fbrand,.spd .freach{grid-column:1 / -1}
+  .spd .fcols>div:not(.fbrand){gap:0}
+  .spd .fcols>div:not(.fbrand) h4{margin-bottom:6px}
+  .spd .foot a{padding:10px 0}
+  .spd .booklink{padding-top:2px;padding-bottom:4px}
+  .spd .booklink a{display:inline-block;padding:12px 8px}
+}
+/* full bleed: break out of the GHL row so the page runs edge to edge */
+.spd[class*=" spd-"]{width:calc(100vw - var(--sbw,0px))!important;max-width:none!important;margin-left:calc(50% - 50vw + var(--sbw,0px) / 2)!important;margin-right:0!important}
+</style>
+
+<div class="spd spd-ceramic-coating">
+<!-- ANNOUNCEMENT <div class="ann">NEW&nbsp; <strong>Fall openings:</strong> booking Full Details through October 18th <span class="arr">→</span></div> ANNOUNCEMENT -->
+
+<section class="hero chero">
+  <img class="crest" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's Premium Detail">
+  <h1>Want it to stay clean longer?</h1>
+  <p class="sub">Ceramic coating at your driveway, done the right way by trained professionals.</p>
+  <div class="btns"><a class="cta big" href="#book">Get it quoted</a></div>
+  <div class="rating"><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="stars">★★★★★</span><b data-live="rating">5.0</b><span class="sep">|</span><span><span data-live="reviews">85</span> reviews</span></div>
+</section>
+
+<section class="sec">
+  <div class="sechead"><h2>What the lake is saying:</h2></div>
+  <div class="gcards">
+    <div class="gcard t0"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-roslene.png" alt="" loading="lazy"><div><b>Roslene Pruitt</b><small>Tesla, ceramic</small></div></div><div class="gstars"><span>★★★★★</span><small>April 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Perfect job detailing and ceramic coating my Tesla. He came out to the house and spent the day <mark>making my car look brand new.</mark> So happy!</p></div>
+    <div class="gcard t1"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-rayotten.png" alt="" loading="lazy"><div><b>Ray Otten</b><small>Corvette ZR1, ceramic</small></div></div><div class="gstars"><span>★★★★★</span><small>February 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Very happy with the team from Shelton's Detail. <mark>They went beyond a great job by caring and commitment to their trade.</mark> They will be my go to for detailing.</p><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/cp-otten2.jpg" alt="" loading="lazy"></div>
+    <div class="gcard t2"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-frank.png" alt="" loading="lazy"><div><b>Frank Vaughan</b><small>RV + car, ceramic</small></div></div><div class="gstars"><span>★★★★★</span><small>May 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>He did an awesome job cleaning an RV plus <mark>ceramic coating our car.</mark> Highly recommend them.</p></div>
+  </div>
+  <p class="disc">Verified Google reviews, their words. Results on your vehicle depend on its condition and how it's driven between visits.</p>
+</section>
+
+<section class="hero pbanner cpb0" style="background-image:linear-gradient(180deg,rgba(11,18,32,.70) 0%,rgba(11,18,32,.55) 55%,rgba(11,18,32,.90) 100%),url(https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/cp-19.jpg)">
+  <h2 class="pbh">Everyday Protection</h2>
+  <p class="sub">Long-term protection for the vehicle you drive every day.</p>
+  <div class="btns"><a class="cta big" href="#book">Get it quoted</a></div>
+</section>
+<section class="sec snips">
+  <ul class="snl">
+    <li><b>Wash and clay prep</b> so the coating bonds to the paint, not to the dirt on it.</li>
+    <li><b>Buff or Step 1 correction</b> the paint inspection decides which. You don't pay for more than it needs.</li>
+    <li><b>3-year ceramic coating</b> water beads off and dirt rinses away with a hose.</li>
+    <li><b>Base warranty</b> terms in writing at your quote.</li>
+  </ul>
+</section>
+
+<section class="hero pbanner cpb1" style="background-image:linear-gradient(180deg,rgba(11,18,32,.70) 0%,rgba(11,18,32,.55) 55%,rgba(11,18,32,.90) 100%),url(https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/cp-c3.jpg)">
+  <h2 class="pbh">Pride Car Protection</h2>
+  <p class="sub">Maximum protection for the one you're proud of.</p>
+  <div class="btns"><a class="cta big" href="#book">Get it quoted</a></div>
+</section>
+<section class="sec snips">
+  <ul class="snl">
+    <li><b>Wash and clay prep</b> so the coating bonds to the paint, not to the dirt on it.</li>
+    <li><b>Step 2 correction</b> swirls and light scratches cut out before anything gets locked in.</li>
+    <li><b>8-year ceramic coating</b> the longest protection we put on a vehicle.</li>
+    <li><b>Maximum warranty</b> terms in writing at your quote.</li>
+  </ul>
+</section>
+
+<section class="hero pbanner" style="background-image:linear-gradient(180deg,rgba(11,18,32,.70) 0%,rgba(11,18,32,.55) 55%,rgba(11,18,32,.90) 100%),url(https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/cp-105.jpg)">
+  <h2 class="pbh">Protect the rest of it?</h2>
+  </section>
+<section class="sec adsec">
+  <div class="ad2">
+    <div class="adp"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/ad-leather.jpg" alt="" loading="lazy"><b>Leather ceramic coating</b><p>Spills wipe off, jean dye doesn't set, color doesn't fade. Up to 18 months.</p></div>
+    <div class="adp"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/ad-glass.jpg" alt="" loading="lazy"><b>Glass coating</b><p>Rain beads and blows off at speed. Clearer in a storm.</p></div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="sechead"><h2>How it works.</h2></div>
+  <ol class="steps">
+    <li><b>1</b><div><h4>We inspect it with you</h4><p>At your driveway. The paint decides the correction, you decide the package.</p></div></li>
+    <li><b>2</b><div><h4>Prep and correction</h4><p>Wash and clay on every vehicle, then the correction the inspection called for.</p></div></li>
+    <li><b>3</b><div><h4>Coat and cure</h4><p>Applied panel by panel and cured before you get the keys back.</p></div></li>
+    <li><b>4</b><div><h4>Keep it there</h4><p>A coating still needs washing. Our maintenance plan hand-washes it every two weeks and tops the coating every visit.</p></div></li>
+  </ol>
+  <div class="btns mid"><a class="cta big" href="#book">Get it quoted</a></div>
+</section>
+
+<section class="sec alt">
+  <div class="sechead"><h2><span data-live="reviews">85</span> five-star reviews on Google.</h2></div>
+  <!-- LIVE REVIEWS: to let sitewire.js swap this board for the newest five-star
+       Google reviews, add  data-reviews="12" data-min-words="8"  to the div below.
+       Off for now: the feed holds 8 qualifying reviews and would replace this
+       board of 22 hand-picked ones with highlights. The .sw-review styles are ready. -->
+  <div class="gcards board">
+    <div class="gcard s0"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-estella.png" alt="" loading="lazy"><div><b>Estella Lyon</b><small>Lexus LC 500</small></div></div><div class="gstars"><span>★★★★★</span><small>June 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Landon was very thorough in cleaning my Lexus LC500. <mark>It looks like new and really shines.</mark> I recommend him to everyone!</p></div>
+    <div class="gcard s1"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-david.png" alt="" loading="lazy"><div><b>David D</b><small>Two cars</small></div></div><div class="gstars"><span>★★★★★</span><small>June 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Just found Sheltons Premium Detail. Landon just finished our 2 cars. <mark>They haven't been this clean since I purchased them.</mark> I highly recommend Landon and his crew.</p><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/david-photo.jpg" alt="" loading="lazy"></div>
+    <div class="gcard s2"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-ray.png" alt="" loading="lazy"><div><b>Ray Lambert</b><small>Truck</small></div></div><div class="gstars"><span>★★★★★</span><small>August 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Shelton Premium Detail did an awesome job on my truck!!! <mark>It looks absolutely brand new again!</mark> You won't be disappointed!</p></div>
+    <div class="gcard s3"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-lamon.png" alt="" loading="lazy"><div><b>La Mon Chaney</b><small>Daily driver</small></div></div><div class="gstars"><span>★★★★★</span><small>August 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Great job, my car was soo dirty... <mark>looks like it rolled off the showroom floor!</mark> Thank you so much</p></div>
+    <div class="gcard s4"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-kellie.png" alt="" loading="lazy"><div><b>Kellie Miller</b><small>New car, new baby</small></div></div><div class="gstars"><span>★★★★★</span><small>June 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Amazing service. They were very accommodating to me being severely pregnant. <mark>The car looks newer than new</mark> and just in time for baby boy to arrive.</p></div>
+    <div class="gcard s5"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-deana.png" alt="" loading="lazy"><div><b>Deana Oldham</b><small>F-350 dually</small></div></div><div class="gstars"><span>★★★★★</span><small>August 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>We have a large F-350 dually and it was a mess. <mark>Our truck looks beautiful!</mark> And he was very professional and right on time! Will use again!</p></div>
+    <div class="gcard s6"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-kristen.png" alt="" loading="lazy"><div><b>Kristen Amato</b><small>Clay bar detail</small></div></div><div class="gstars"><span>★★★★★</span><small>March 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Excellent work! Attention to detail is on point. <mark>After the clay bar detail the car looked brand new.</mark></p></div>
+    <div class="gcard s7"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-lanie.png" alt="" loading="lazy"><div><b>Lanie Cheyenne</b><small>Husband's truck</small></div></div><div class="gstars"><span>★★★★★</span><small>March 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>He detailed my husband's truck this weekend and did an absolutely amazing job. <mark>Don't let his age fool you—his work speaks for itself!</mark> The truck looks incredible.</p></div>
+    <div class="gcard s8"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-blaze.png" alt="" loading="lazy"><div><b>Blaze Singleton</b><small>Truck</small></div></div><div class="gstars"><span>★★★★★</span><small>February 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Awesome work. <mark>Worth the price.</mark> I was shocked how good my truck looked!</p></div>
+    <div class="gcard s9"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-mark.png" alt="" loading="lazy"><div><b>Mark Watson</b><small>Truck</small></div></div><div class="gstars"><span>★★★★★</span><small>March 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Landon did an awesome job. <mark>The truck looks like new.</mark> Highly recommend!</p></div>
+    <div class="gcard s10"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-jim.png" alt="" loading="lazy"><div><b>Jim Brown</b><small>RAV4, second visit</small></div></div><div class="gstars"><span>★★★★★</span><small>August 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p><mark>2nd great job for us</mark> the wife RAV4 this time. Very well mannered and very professional great young man !!</p></div>
+    <div class="gcard s11"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-brenda.png" alt="" loading="lazy"><div><b>Brenda</b><small>Husband's truck</small></div></div><div class="gstars"><span>★★★★★</span><small>August 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Thank you so much for coming by and detailing my husbands truck. He's very OCD! <mark>I recommend Shelton Premium Detail for your vehicle to look brand spanking new!!</mark></p></div>
+    <div class="gcard s12"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-adriana.png" alt="" loading="lazy"><div><b>Adriana Mcgee</b><small></small></div></div><div class="gstars"><span>★★★★★</span><small>January 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Great customer service. Nice respectable people who did an amazing job. <mark>I will be using their detailing services from now on</mark></p></div>
+    <div class="gcard s13"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-rayotten.png" alt="" loading="lazy"><div><b>Ray Otten</b><small>Corvette ZR1</small></div></div><div class="gstars"><span>★★★★★</span><small>February 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Very happy with the team from Shelton's Detail. <mark>They went beyond a great job by caring and commitment to their trade.</mark> They will be my go to for detailing.</p></div>
+    <div class="gcard s14"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-tray.png" alt="" loading="lazy"><div><b>Tray Simmons</b><small></small></div></div><div class="gstars"><span>★★★★★</span><small>August 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Did a great job. <mark>Went over what he was going to do before doing everything.</mark></p></div>
+    <div class="gcard s15"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-yoali.png" alt="" loading="lazy"><div><b>Yoali Aguilar</b><small></small></div></div><div class="gstars"><span>★★★★★</span><small>March 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p><mark>We were super pleased with their services.</mark> Would definitely recommend!!!!!</p></div>
+    <div class="gcard s16"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-william.png" alt="" loading="lazy"><div><b>William Willard</b><small></small></div></div><div class="gstars"><span>★★★★★</span><small>February 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Awesome job and <mark>dedicated to customer satisfaction.</mark> Definitely recommend to anyone wanting a detail</p></div>
+    <div class="gcard s17"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-carsyn.png" alt="" loading="lazy"><div><b>Carsyn Rhea</b><small></small></div></div><div class="gstars"><span>★★★★★</span><small>January 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>Great cleaning quality, <mark>didn't leave a speck of dust behind.</mark> I recommend heavily</p></div>
+    <div class="gcard s18"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-brandy.png" alt="" loading="lazy"><div><b>Brandy Coogler</b><small>Boat</small></div></div><div class="gstars"><span>★★★★★</span><small>August 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p>We couldn't be happier with the job on our boat! <mark>He paid attention to every little detail.</mark> You can tell he takes pride in his work.</p></div>
+    <div class="gcard s19"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-suzann.png" alt="" loading="lazy"><div><b>Suzann Brown</b><small>Old truck</small></div></div><div class="gstars"><span>★★★★★</span><small>August 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p><mark>He made an old truck look much newer!</mark></p></div>
+    <div class="gcard s20"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-zachary.png" alt="" loading="lazy"><div><b>Zachary Willcutt</b><small></small></div></div><div class="gstars"><span>★★★★★</span><small>April 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p><mark>Great job, excellent service.</mark></p></div>
+    <div class="gcard s21"><div class="ghead"><img class="gav" src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/av-james.png" alt="" loading="lazy"><div><b>James Lumen</b><small></small></div></div><div class="gstars"><span>★★★★★</span><small>August 2026</small><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></div><p><mark>Great job and truly a nice guy</mark> great to do business with</p></div>
+  </div>
+</section>
+
+<section class="bookfull" id="book">
+  <iframe src="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" allow="payment *; geolocation *" loading="lazy" title="Book with Shelton's Premium Detail"></iframe>
+  <p class="booklink"><a href="https://app.urable.com/virtual-shop/8qaRUZYi0C0VRdtbPuMC" target="_blank" rel="noopener">Window not loading? Open booking</a></p>
+</section>
+
+<section class="sec">
+  <div class="faqo">
+    <div class="fo"><div class="foq">Why get a ceramic coating?<span aria-hidden="true">×</span></div><div class="foa"><p>Four reasons. Long-term protection for the paint. Easier washing. It stays cleaner longer. And it sheds dirt and water on its own, so the vehicle looks washed for longer between washes.</p></div></div>
+    <div class="fo"><div class="foq">Which package is mine?<span aria-hidden="true">×</span></div><div class="foa"><p>If you drive it every day, <b>Everyday Protection</b>.</p><p>If it's the one you'd never let a car wash touch, <b>Pride Car Protection</b>.</p><p>Either way the paint inspection sets the correction, so you're never paying for work the paint doesn't need.</p></div></div>
+    <div class="fo"><div class="foq">Does it need a detail first?<span aria-hidden="true">×</span></div><div class="foa"><p>Every coating starts with a wash and clay. Anything bonded to the paint gets pulled off so the coating bonds to the paint itself. That prep is part of the quote.</p></div></div>
+    <div class="fo"><div class="foq">Does it make the paint scratch-proof?<span aria-hidden="true">×</span></div><div class="foa"><p>No. It's a hard layer, not armor. It takes the swirls a wash would put in, shrugs off sun and bird droppings, and makes everything easier to clean. Rock chips still win.</p></div></div>
+    <div class="fo"><div class="foq">How much is it?<span aria-hidden="true">×</span></div><div class="foa"><p>Quoted on your vehicle, in person. The paint's condition sets most of the price, and that can't be read from a photo.</p><p>You get one number before it's scheduled. Nothing gets added on the day.</p></div></div>
+    <div class="fo"><div class="foq">Do I need to be there?<span aria-hidden="true">×</span></div><div class="foa"><p>For the inspection, yes. We walk the paint with you and agree on the package before anything is touched.</p></div></div>
+  </div>
+</section>
+
+<section class="hero pbanner cpbm" style="background-image:linear-gradient(180deg,rgba(11,18,32,.70) 0%,rgba(11,18,32,.55) 55%,rgba(11,18,32,.90) 100%),url(https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/cp-c4.jpg)">
+  <h2 class="pbh">Ready to protect it?</h2>
+  <p class="sub">Quoted with you in person, at your driveway.</p>
+  <div class="btns"><a class="cta big" href="#book">Get it quoted</a></div>
+  <div class="rating"><svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 2.9-2.2 5.4-4.7 7.1l7.6 5.9c4.4-4.1 6.9-10.1 6.9-17.5z"/><path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="stars">★★★★★</span><b data-live="rating">5.0</b><span class="sep">|</span><span><span data-live="reviews">85</span> reviews</span></div>
+</section>
+
+<footer class="foot">
+  <div class="fcols">
+    <div class="fbrand"><img src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/img/logo.png" alt="Shelton's crest" loading="lazy"><p>Cedar Creek Lake's highest-rated mobile detailer. We come to your driveway across East Texas.</p><p class="frate">★★★★★ <span data-live="rating">5.0</span> · <span data-live="reviews">85</span> Google reviews</p></div>
+    <div><h4>Services</h4><a href="/detailing">Full Detail</a><a href="/detailing">Interior Detail</a><a href="/detailing">Exterior Detail</a><a href="/maintenance">Maintenance</a></div>
+    <div><h4>Company</h4><a href="https://maps.google.com/maps?cid=18272422692036339866" target="_blank" rel="noopener">Google Reviews</a><a href="https://www.instagram.com/sheltonspremiumdetail/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61579896224490" target="_blank" rel="noopener">Facebook</a><a href="/privacypolicy">Privacy Policy</a></div>
+    <div class="freach"><h4>Reach us</h4><a href="tel:+19036036017">(903) 603-6017</a><a href="mailto:landonshelton@sheltonspremiumdetail.com">landonshelton@<wbr>sheltonspremiumdetail.com</a><p class="fsm">Mobile across Henderson County and Cedar Creek Lake.</p></div>
+  </div>
+  <p class="copy">© 2026 Shelton's Premium Detail · Cedar Creek Lake, TX</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.currentScript&&document.currentScript.previousElementSibling;
+  if(!root||!root.classList||!root.classList.contains('spd'))root=document.querySelector('.spd.spd-ceramic-coating');
+  if(!root)return;
+  // every CTA scrolls to the booking window
+  root.querySelectorAll('a[href="#book"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=root.querySelector('#book');if(!t)return;
+      e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+})();
+</script>
+<script>(function(){var r=document.querySelectorAll('.spd[class*=" spd-"]');function f(){var s=(innerWidth-document.documentElement.clientWidth)+"px";r.forEach(function(e){e.style.setProperty("--sbw",s);for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){if(getComputedStyle(p).overflowX!=="visible")p.style.overflowX="visible"}})}f();addEventListener("resize",f)})();</script>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/landonshelton/sheltons-site@main/sitewire.js" data-ga4="G-ZVRP0SLZQV" defer></script>
