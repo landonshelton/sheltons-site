@@ -1,6 +1,13 @@
 {
- "at": "2026-11-03T11:57:29Z",
+ "at": "2026-11-04T11:56:59Z",
  "products": {
+  "sA39RshSONKfIkFyOPiT": {
+   "name": "INCREDIBLE SUDS - Diy Detail",
+   "shop": false,
+   "tiers": {
+    "flat": 84.99
+   }
+  },
   "sDSKjtuSAoPcTvRyZvel": {
    "name": "Leather Ceramic Coating Add On",
    "shop": false,
