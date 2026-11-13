@@ -1,5 +1,5 @@
 {
- "at": "2026-11-12T11:57:07Z",
+ "at": "2026-11-13T11:57:10Z",
  "products": {
   "sA39RshSONKfIkFyOPiT": {
    "name": "INCREDIBLE SUDS - Diy Detail",
@@ -42,9 +42,9 @@
    "name": "Wash Clay and Seal. (Lvl 1 Exterior)",
    "shop": true,
    "tiers": {
-    "Coupe/Sedan": 125.0,
-    "Small/Midsize Suv": 145.0,
-    "Truck/Large Suv": 165.0
+    "Coupe/Sedan": 160.0,
+    "Truck/Large Suv": 160.0,
+    "Small/Midsize Suv": 160.0
    }
   },
   "XbjJeTW6ZqAYUEB6Vxfu": {
